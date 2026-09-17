@@ -1,0 +1,850 @@
+[
+  {
+    "name": "an",
+    "path": "src/locale/locales/an",
+    "sha": "7b74f5932df99f0a38d816971133f09cfc60dd55",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/an?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/an",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/7b74f5932df99f0a38d816971133f09cfc60dd55",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/an?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/7b74f5932df99f0a38d816971133f09cfc60dd55",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/an"
+    }
+  },
+  {
+    "name": "ar",
+    "path": "src/locale/locales/ar",
+    "sha": "9d79b7b70ef21be2a4bc1ccd24b2b9b7ebb0789e",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ar?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ar",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/9d79b7b70ef21be2a4bc1ccd24b2b9b7ebb0789e",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ar?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/9d79b7b70ef21be2a4bc1ccd24b2b9b7ebb0789e",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ar"
+    }
+  },
+  {
+    "name": "ast",
+    "path": "src/locale/locales/ast",
+    "sha": "53ce02bd5ad540db4d55966564347d30cc411055",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ast?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ast",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/53ce02bd5ad540db4d55966564347d30cc411055",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ast?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/53ce02bd5ad540db4d55966564347d30cc411055",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ast"
+    }
+  },
+  {
+    "name": "az",
+    "path": "src/locale/locales/az",
+    "sha": "a29e8cccd366dd5a6925918cf954e4d3bbbf34b0",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/az?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/az",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/a29e8cccd366dd5a6925918cf954e4d3bbbf34b0",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/az?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/a29e8cccd366dd5a6925918cf954e4d3bbbf34b0",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/az"
+    }
+  },
+  {
+    "name": "bn",
+    "path": "src/locale/locales/bn",
+    "sha": "1790ec415f3baeaefdd96a2f390a8d5c2bdb8764",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/bn?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/bn",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/1790ec415f3baeaefdd96a2f390a8d5c2bdb8764",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/bn?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/1790ec415f3baeaefdd96a2f390a8d5c2bdb8764",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/bn"
+    }
+  },
+  {
+    "name": "br",
+    "path": "src/locale/locales/br",
+    "sha": "da4d7c8696b501bd22ef640fd2db97adc14d124b",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/br?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/br",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/da4d7c8696b501bd22ef640fd2db97adc14d124b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/br?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/da4d7c8696b501bd22ef640fd2db97adc14d124b",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/br"
+    }
+  },
+  {
+    "name": "ca",
+    "path": "src/locale/locales/ca",
+    "sha": "78f9c6e19d4bf0c34f7e42342f784e420daa7f65",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ca?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ca",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/78f9c6e19d4bf0c34f7e42342f784e420daa7f65",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ca?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/78f9c6e19d4bf0c34f7e42342f784e420daa7f65",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ca"
+    }
+  },
+  {
+    "name": "cs",
+    "path": "src/locale/locales/cs",
+    "sha": "7d13b421887725c454c205a7d06fa4d7a4b8eef0",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/cs?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/cs",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/7d13b421887725c454c205a7d06fa4d7a4b8eef0",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/cs?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/7d13b421887725c454c205a7d06fa4d7a4b8eef0",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/cs"
+    }
+  },
+  {
+    "name": "cy",
+    "path": "src/locale/locales/cy",
+    "sha": "5dca4b1329e121589cc6fc218ea38f082211f0d4",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/cy?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/cy",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/5dca4b1329e121589cc6fc218ea38f082211f0d4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/cy?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/5dca4b1329e121589cc6fc218ea38f082211f0d4",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/cy"
+    }
+  },
+  {
+    "name": "da",
+    "path": "src/locale/locales/da",
+    "sha": "ec14554b03645a83c46da6cbb77136dc5cc8784d",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/da?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/da",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/ec14554b03645a83c46da6cbb77136dc5cc8784d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/da?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/ec14554b03645a83c46da6cbb77136dc5cc8784d",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/da"
+    }
+  },
+  {
+    "name": "de",
+    "path": "src/locale/locales/de",
+    "sha": "10a83982302931cefd2da2e44be281112cb26b35",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/de?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/de",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/10a83982302931cefd2da2e44be281112cb26b35",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/de?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/10a83982302931cefd2da2e44be281112cb26b35",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/de"
+    }
+  },
+  {
+    "name": "el",
+    "path": "src/locale/locales/el",
+    "sha": "2e12c142d2018438c8648c07a240edcf460cecc4",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/el?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/el",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/2e12c142d2018438c8648c07a240edcf460cecc4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/el?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/2e12c142d2018438c8648c07a240edcf460cecc4",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/el"
+    }
+  },
+  {
+    "name": "en-CA",
+    "path": "src/locale/locales/en-CA",
+    "sha": "59872e7949c9c18abeee343ca9704d411a8f8a24",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/en-CA?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/en-CA",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/59872e7949c9c18abeee343ca9704d411a8f8a24",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/en-CA?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/59872e7949c9c18abeee343ca9704d411a8f8a24",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/en-CA"
+    }
+  },
+  {
+    "name": "en-GB",
+    "path": "src/locale/locales/en-GB",
+    "sha": "e9ecd48ab25fc4988a0ae70122422bbb6cb24820",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/en-GB?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/en-GB",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/e9ecd48ab25fc4988a0ae70122422bbb6cb24820",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/en-GB?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/e9ecd48ab25fc4988a0ae70122422bbb6cb24820",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/en-GB"
+    }
+  },
+  {
+    "name": "en",
+    "path": "src/locale/locales/en",
+    "sha": "6022e8084be7a4d23dd6152a783e729a9f358694",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/en?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/en",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6022e8084be7a4d23dd6152a783e729a9f358694",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/en?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6022e8084be7a4d23dd6152a783e729a9f358694",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/en"
+    }
+  },
+  {
+    "name": "eo",
+    "path": "src/locale/locales/eo",
+    "sha": "719f00a2d4fd84696673731d179c31a5fec47c5b",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/eo?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/eo",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/719f00a2d4fd84696673731d179c31a5fec47c5b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/eo?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/719f00a2d4fd84696673731d179c31a5fec47c5b",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/eo"
+    }
+  },
+  {
+    "name": "es",
+    "path": "src/locale/locales/es",
+    "sha": "bf02aed62dcdbcbc93344d7d600b67354803a588",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/es?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/es",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/bf02aed62dcdbcbc93344d7d600b67354803a588",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/es?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/bf02aed62dcdbcbc93344d7d600b67354803a588",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/es"
+    }
+  },
+  {
+    "name": "eu",
+    "path": "src/locale/locales/eu",
+    "sha": "1ca8ca4cff20637b928a4d1304b3c04e3004d86a",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/eu?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/eu",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/1ca8ca4cff20637b928a4d1304b3c04e3004d86a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/eu?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/1ca8ca4cff20637b928a4d1304b3c04e3004d86a",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/eu"
+    }
+  },
+  {
+    "name": "fi",
+    "path": "src/locale/locales/fi",
+    "sha": "8ac278d84875ac1327b1a459fb3ff441456fd64a",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/fi?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/fi",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/8ac278d84875ac1327b1a459fb3ff441456fd64a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/fi?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/8ac278d84875ac1327b1a459fb3ff441456fd64a",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/fi"
+    }
+  },
+  {
+    "name": "fr-CA",
+    "path": "src/locale/locales/fr-CA",
+    "sha": "4650bde188f52df3f725e580f0bc521fb4154ded",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/fr-CA?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/fr-CA",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/4650bde188f52df3f725e580f0bc521fb4154ded",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/fr-CA?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/4650bde188f52df3f725e580f0bc521fb4154ded",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/fr-CA"
+    }
+  },
+  {
+    "name": "fr",
+    "path": "src/locale/locales/fr",
+    "sha": "72760393cfc970230b91caaa7d93e5f0751a607d",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/fr?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/fr",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/72760393cfc970230b91caaa7d93e5f0751a607d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/fr?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/72760393cfc970230b91caaa7d93e5f0751a607d",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/fr"
+    }
+  },
+  {
+    "name": "fy",
+    "path": "src/locale/locales/fy",
+    "sha": "1292ec68ff4e90aa369e69e8011e3194fe31314a",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/fy?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/fy",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/1292ec68ff4e90aa369e69e8011e3194fe31314a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/fy?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/1292ec68ff4e90aa369e69e8011e3194fe31314a",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/fy"
+    }
+  },
+  {
+    "name": "ga",
+    "path": "src/locale/locales/ga",
+    "sha": "6b1410756d306509a7d2b1386c51c2b5e3133b98",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ga?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ga",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6b1410756d306509a7d2b1386c51c2b5e3133b98",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ga?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6b1410756d306509a7d2b1386c51c2b5e3133b98",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ga"
+    }
+  },
+  {
+    "name": "gd",
+    "path": "src/locale/locales/gd",
+    "sha": "f856015b0deea2ae70cf355d18678f9e86a8b2e7",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/gd?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/gd",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/f856015b0deea2ae70cf355d18678f9e86a8b2e7",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/gd?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/f856015b0deea2ae70cf355d18678f9e86a8b2e7",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/gd"
+    }
+  },
+  {
+    "name": "gl",
+    "path": "src/locale/locales/gl",
+    "sha": "79d5ab573a14e3c084e7ad20f9f8fe2248178704",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/gl?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/gl",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/79d5ab573a14e3c084e7ad20f9f8fe2248178704",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/gl?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/79d5ab573a14e3c084e7ad20f9f8fe2248178704",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/gl"
+    }
+  },
+  {
+    "name": "haw",
+    "path": "src/locale/locales/haw",
+    "sha": "6607ebe758ac26f8f3927fd89aa5f6499348272a",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/haw?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/haw",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6607ebe758ac26f8f3927fd89aa5f6499348272a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/haw?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6607ebe758ac26f8f3927fd89aa5f6499348272a",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/haw"
+    }
+  },
+  {
+    "name": "hi",
+    "path": "src/locale/locales/hi",
+    "sha": "d761555b076bf670a2486ba69e1f1fbeb68669b7",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/hi?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/hi",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/d761555b076bf670a2486ba69e1f1fbeb68669b7",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/hi?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/d761555b076bf670a2486ba69e1f1fbeb68669b7",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/hi"
+    }
+  },
+  {
+    "name": "hu",
+    "path": "src/locale/locales/hu",
+    "sha": "89521ac2a5cbdc66ac107b0653794bcc7b7fda42",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/hu?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/hu",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/89521ac2a5cbdc66ac107b0653794bcc7b7fda42",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/hu?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/89521ac2a5cbdc66ac107b0653794bcc7b7fda42",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/hu"
+    }
+  },
+  {
+    "name": "ia",
+    "path": "src/locale/locales/ia",
+    "sha": "62b2e10c7c5d1e75fd1d241d57a47d0979cb4dde",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ia?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ia",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/62b2e10c7c5d1e75fd1d241d57a47d0979cb4dde",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ia?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/62b2e10c7c5d1e75fd1d241d57a47d0979cb4dde",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ia"
+    }
+  },
+  {
+    "name": "id",
+    "path": "src/locale/locales/id",
+    "sha": "7c8f18deb92d1d02d3e2ea567a1f45f17de9d99f",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/id?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/id",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/7c8f18deb92d1d02d3e2ea567a1f45f17de9d99f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/id?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/7c8f18deb92d1d02d3e2ea567a1f45f17de9d99f",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/id"
+    }
+  },
+  {
+    "name": "it",
+    "path": "src/locale/locales/it",
+    "sha": "6f31e2606959f6293cd745f306407dd7df14c7e1",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/it?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/it",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6f31e2606959f6293cd745f306407dd7df14c7e1",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/it?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6f31e2606959f6293cd745f306407dd7df14c7e1",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/it"
+    }
+  },
+  {
+    "name": "ja",
+    "path": "src/locale/locales/ja",
+    "sha": "dc7edf9b85e5c81cac6281de412e58b5920f8949",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ja?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ja",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/dc7edf9b85e5c81cac6281de412e58b5920f8949",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ja?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/dc7edf9b85e5c81cac6281de412e58b5920f8949",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ja"
+    }
+  },
+  {
+    "name": "kab",
+    "path": "src/locale/locales/kab",
+    "sha": "654fb3ec7f6951fdeb33b61adac28b7e3547bf5f",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/kab?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/kab",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/654fb3ec7f6951fdeb33b61adac28b7e3547bf5f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/kab?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/654fb3ec7f6951fdeb33b61adac28b7e3547bf5f",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/kab"
+    }
+  },
+  {
+    "name": "km",
+    "path": "src/locale/locales/km",
+    "sha": "c8d9768c97c6f3434ed7346f869109183cf2e451",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/km?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/km",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/c8d9768c97c6f3434ed7346f869109183cf2e451",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/km?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/c8d9768c97c6f3434ed7346f869109183cf2e451",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/km"
+    }
+  },
+  {
+    "name": "ko",
+    "path": "src/locale/locales/ko",
+    "sha": "ffc5198ad4d179df59ada8ff0eaa3b6933b7d82f",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ko?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ko",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/ffc5198ad4d179df59ada8ff0eaa3b6933b7d82f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ko?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/ffc5198ad4d179df59ada8ff0eaa3b6933b7d82f",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ko"
+    }
+  },
+  {
+    "name": "kw",
+    "path": "src/locale/locales/kw",
+    "sha": "ee1db63e6a7ceb3c5a9dbc3faeadfa6353bbb1b1",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/kw?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/kw",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/ee1db63e6a7ceb3c5a9dbc3faeadfa6353bbb1b1",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/kw?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/ee1db63e6a7ceb3c5a9dbc3faeadfa6353bbb1b1",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/kw"
+    }
+  },
+  {
+    "name": "lt",
+    "path": "src/locale/locales/lt",
+    "sha": "4060ec8364e0531efff6c02b1948c6b9752e7cb1",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/lt?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/lt",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/4060ec8364e0531efff6c02b1948c6b9752e7cb1",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/lt?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/4060ec8364e0531efff6c02b1948c6b9752e7cb1",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/lt"
+    }
+  },
+  {
+    "name": "lv",
+    "path": "src/locale/locales/lv",
+    "sha": "cdba7425c09a386aab02133bc997c1d3bf51ab2d",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/lv?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/lv",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/cdba7425c09a386aab02133bc997c1d3bf51ab2d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/lv?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/cdba7425c09a386aab02133bc997c1d3bf51ab2d",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/lv"
+    }
+  },
+  {
+    "name": "ne",
+    "path": "src/locale/locales/ne",
+    "sha": "0197c009125d242bb657ab497339565e5239bb3c",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ne?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ne",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/0197c009125d242bb657ab497339565e5239bb3c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ne?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/0197c009125d242bb657ab497339565e5239bb3c",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ne"
+    }
+  },
+  {
+    "name": "nl",
+    "path": "src/locale/locales/nl",
+    "sha": "d119e63d37c090dbece6fd511075e4622e1a486c",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/nl?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/nl",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/d119e63d37c090dbece6fd511075e4622e1a486c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/nl?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/d119e63d37c090dbece6fd511075e4622e1a486c",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/nl"
+    }
+  },
+  {
+    "name": "pl",
+    "path": "src/locale/locales/pl",
+    "sha": "321aad33b3f205e48b101803c9337db512a4f4f2",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/pl?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/pl",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/321aad33b3f205e48b101803c9337db512a4f4f2",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/pl?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/321aad33b3f205e48b101803c9337db512a4f4f2",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/pl"
+    }
+  },
+  {
+    "name": "pt-BR",
+    "path": "src/locale/locales/pt-BR",
+    "sha": "250b5ba9a269ad43410aff6b3547da468e4f7bcd",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/pt-BR?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/pt-BR",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/250b5ba9a269ad43410aff6b3547da468e4f7bcd",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/pt-BR?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/250b5ba9a269ad43410aff6b3547da468e4f7bcd",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/pt-BR"
+    }
+  },
+  {
+    "name": "pt-PT",
+    "path": "src/locale/locales/pt-PT",
+    "sha": "96147f3fdf0ae4afac32b68694c92dc63c68bc27",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/pt-PT?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/pt-PT",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/96147f3fdf0ae4afac32b68694c92dc63c68bc27",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/pt-PT?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/96147f3fdf0ae4afac32b68694c92dc63c68bc27",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/pt-PT"
+    }
+  },
+  {
+    "name": "ro",
+    "path": "src/locale/locales/ro",
+    "sha": "deac3810ad6d68f50738bf18b5f910b12f08c12c",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ro?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ro",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/deac3810ad6d68f50738bf18b5f910b12f08c12c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ro?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/deac3810ad6d68f50738bf18b5f910b12f08c12c",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ro"
+    }
+  },
+  {
+    "name": "ru",
+    "path": "src/locale/locales/ru",
+    "sha": "025f8ff24531d497f8bc8fcce6ac8bf82490914b",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ru?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ru",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/025f8ff24531d497f8bc8fcce6ac8bf82490914b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/ru?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/025f8ff24531d497f8bc8fcce6ac8bf82490914b",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/ru"
+    }
+  },
+  {
+    "name": "sv",
+    "path": "src/locale/locales/sv",
+    "sha": "c95c1b16bd9cbb1a13eb00b745ffa6c4063315b4",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/sv?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/sv",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/c95c1b16bd9cbb1a13eb00b745ffa6c4063315b4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/sv?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/c95c1b16bd9cbb1a13eb00b745ffa6c4063315b4",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/sv"
+    }
+  },
+  {
+    "name": "th",
+    "path": "src/locale/locales/th",
+    "sha": "b7cdd9aa1a4227ea99fe179fca0dd10340fcb19d",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/th?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/th",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/b7cdd9aa1a4227ea99fe179fca0dd10340fcb19d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/th?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/b7cdd9aa1a4227ea99fe179fca0dd10340fcb19d",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/th"
+    }
+  },
+  {
+    "name": "tr",
+    "path": "src/locale/locales/tr",
+    "sha": "6ca2a6d95b56077bd0b95a05a2d8713ae6627e83",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/tr?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/tr",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6ca2a6d95b56077bd0b95a05a2d8713ae6627e83",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/tr?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6ca2a6d95b56077bd0b95a05a2d8713ae6627e83",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/tr"
+    }
+  },
+  {
+    "name": "uk",
+    "path": "src/locale/locales/uk",
+    "sha": "e9460babc8f6eda3bd2565943f0b724fa05ae84b",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/uk?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/uk",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/e9460babc8f6eda3bd2565943f0b724fa05ae84b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/uk?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/e9460babc8f6eda3bd2565943f0b724fa05ae84b",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/uk"
+    }
+  },
+  {
+    "name": "vi",
+    "path": "src/locale/locales/vi",
+    "sha": "4806543f215e58b15bad770319b2f2c29c162a26",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/vi?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/vi",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/4806543f215e58b15bad770319b2f2c29c162a26",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/vi?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/4806543f215e58b15bad770319b2f2c29c162a26",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/vi"
+    }
+  },
+  {
+    "name": "zh-CN",
+    "path": "src/locale/locales/zh-CN",
+    "sha": "0dd3629847f2eff839a3e1dfbca10df65d3f7f6a",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/zh-CN?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/zh-CN",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/0dd3629847f2eff839a3e1dfbca10df65d3f7f6a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/zh-CN?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/0dd3629847f2eff839a3e1dfbca10df65d3f7f6a",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/zh-CN"
+    }
+  },
+  {
+    "name": "zh-HK",
+    "path": "src/locale/locales/zh-HK",
+    "sha": "d1415861e3a0100a37833f15176eea33deef7f7d",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/zh-HK?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/zh-HK",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/d1415861e3a0100a37833f15176eea33deef7f7d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/zh-HK?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/d1415861e3a0100a37833f15176eea33deef7f7d",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/zh-HK"
+    }
+  },
+  {
+    "name": "zh-TW",
+    "path": "src/locale/locales/zh-TW",
+    "sha": "68113352e7000a3eb638aaa8d8f67d7ce74eb884",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/zh-TW?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/zh-TW",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/68113352e7000a3eb638aaa8d8f67d7ce74eb884",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/locale/locales/zh-TW?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/68113352e7000a3eb638aaa8d8f67d7ce74eb884",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/locale/locales/zh-TW"
+    }
+  }
+]

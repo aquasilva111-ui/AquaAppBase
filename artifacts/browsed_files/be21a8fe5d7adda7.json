@@ -1,0 +1,146 @@
+[
+  {
+    "name": "README.md",
+    "path": "src/logger/README.md",
+    "sha": "e3476efdf614b86a601a44b505dc9457a607826c",
+    "size": 1087,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/README.md?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/logger/README.md",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/e3476efdf614b86a601a44b505dc9457a607826c",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/logger/README.md",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/README.md?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/e3476efdf614b86a601a44b505dc9457a607826c",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/logger/README.md"
+    }
+  },
+  {
+    "name": "__tests__",
+    "path": "src/logger/__tests__",
+    "sha": "b38f1c7190b236d0890395e81234102792c82e5f",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/__tests__?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/logger/__tests__",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/b38f1c7190b236d0890395e81234102792c82e5f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/__tests__?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/b38f1c7190b236d0890395e81234102792c82e5f",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/logger/__tests__"
+    }
+  },
+  {
+    "name": "index.tsx",
+    "path": "src/logger/index.tsx",
+    "sha": "99ac79d4ed6e676de0d063dff01acaadcbab55ba",
+    "size": 3912,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/index.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/logger/index.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/99ac79d4ed6e676de0d063dff01acaadcbab55ba",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/logger/index.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/index.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/99ac79d4ed6e676de0d063dff01acaadcbab55ba",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/logger/index.tsx"
+    }
+  },
+  {
+    "name": "logDump.ts",
+    "path": "src/logger/logDump.ts",
+    "sha": "e1a8aa31e6a68f26ccd0a222450f0800b07fe33f",
+    "size": 458,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/logDump.ts?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/logger/logDump.ts",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/e1a8aa31e6a68f26ccd0a222450f0800b07fe33f",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/logger/logDump.ts",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/logDump.ts?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/e1a8aa31e6a68f26ccd0a222450f0800b07fe33f",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/logger/logDump.ts"
+    }
+  },
+  {
+    "name": "reporting",
+    "path": "src/logger/reporting",
+    "sha": "761755754ed305651ee7ad9e0d5d6e09608d907a",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/reporting?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/logger/reporting",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/761755754ed305651ee7ad9e0d5d6e09608d907a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/reporting?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/761755754ed305651ee7ad9e0d5d6e09608d907a",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/logger/reporting"
+    }
+  },
+  {
+    "name": "sentry",
+    "path": "src/logger/sentry",
+    "sha": "00eadbe920d5e3f2e564c5a1278d063da309bb49",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/sentry?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/logger/sentry",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/00eadbe920d5e3f2e564c5a1278d063da309bb49",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/sentry?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/00eadbe920d5e3f2e564c5a1278d063da309bb49",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/logger/sentry"
+    }
+  },
+  {
+    "name": "transports",
+    "path": "src/logger/transports",
+    "sha": "6efc64f25ebe3700fad3f0c48e22506da64f558c",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/transports?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/logger/transports",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6efc64f25ebe3700fad3f0c48e22506da64f558c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/transports?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/6efc64f25ebe3700fad3f0c48e22506da64f558c",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/logger/transports"
+    }
+  },
+  {
+    "name": "types.ts",
+    "path": "src/logger/types.ts",
+    "sha": "7d3c89747700b0be35ca21d8c95b0174e1377741",
+    "size": 2442,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/types.ts?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/logger/types.ts",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/7d3c89747700b0be35ca21d8c95b0174e1377741",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/logger/types.ts",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/types.ts?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/7d3c89747700b0be35ca21d8c95b0174e1377741",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/logger/types.ts"
+    }
+  },
+  {
+    "name": "util.ts",
+    "path": "src/logger/util.ts",
+    "sha": "bd101545ad105e85a758822d2582f762daa3c292",
+    "size": 972,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/util.ts?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/logger/util.ts",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/bd101545ad105e85a758822d2582f762daa3c292",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/logger/util.ts",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/util.ts?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/bd101545ad105e85a758822d2582f762daa3c292",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/logger/util.ts"
+    }
+  }
+]

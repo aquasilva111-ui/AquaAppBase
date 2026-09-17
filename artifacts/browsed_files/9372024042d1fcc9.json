@@ -1,0 +1,34 @@
+[
+  {
+    "name": "console.ts",
+    "path": "src/logger/transports/console.ts",
+    "sha": "d67031ac4a58d8c570977d8a3b45a95359767ad8",
+    "size": 2579,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/transports/console.ts?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/logger/transports/console.ts",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/d67031ac4a58d8c570977d8a3b45a95359767ad8",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/logger/transports/console.ts",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/transports/console.ts?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/d67031ac4a58d8c570977d8a3b45a95359767ad8",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/logger/transports/console.ts"
+    }
+  },
+  {
+    "name": "sentry.ts",
+    "path": "src/logger/transports/sentry.ts",
+    "sha": "92a7b92f67c0f86a9b6cbe5bc494c6ca95fb3020",
+    "size": 3152,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/transports/sentry.ts?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/logger/transports/sentry.ts",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/92a7b92f67c0f86a9b6cbe5bc494c6ca95fb3020",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/logger/transports/sentry.ts",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/transports/sentry.ts?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/92a7b92f67c0f86a9b6cbe5bc494c6ca95fb3020",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/logger/transports/sentry.ts"
+    }
+  }
+]

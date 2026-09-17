@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+
+  --color-background: #f7f8fc;
+  --color-foreground: #1c2430;
+  --color-card: #ffffff;
+  --color-card-foreground: #1c2430;
+  --color-primary: #5aa8ff;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #eef4ff;
+  --color-secondary-foreground: #0d2bdb;
+  --color-muted: #eef1f6;
+  --color-muted-foreground: #7a8494;
+  --color-accent: #0d2bdb;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #b54a43;
+  --color-destructive-foreground: #ffffff;
+  --color-border: rgb(28 36 48 / 0.08);
+  --color-input: rgb(28 36 48 / 0.1);
+  --color-ring: #0d2bdb;
+  --color-nazar: #0d2bdb;
+  --color-iris: #7ec8f5;
+  --color-deep: #0d2bdb;
+  --color-foam: #eef4ff;
+  --color-tide: #6eb4ff;
+  --color-ok: #2f7d5a;
+  --color-warn: #b5762a;
+
+  --radius-xs: 0.5rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 1.75rem;
+  --radius-3xl: 2rem;
+  --radius-4xl: 2.5rem;
+
+  --shadow-border:
+    0 0 0 1px rgb(28 36 48 / 0.06),
+    0 1px 2px rgb(28 36 48 / 0.04),
+    0 10px 28px rgb(28 36 48 / 0.04);
+  --shadow-border-hover:
+    0 0 0 1px rgb(13 43 219 / 0.18),
+    0 10px 28px rgb(13 43 219 / 0.08);
+  --shadow-glass: 0 8px 24px rgb(13 43 219 / 0.05);
+  --shadow-glass-hover: 0 12px 32px rgb(13 43 219 / 0.09);
+  --shadow-float: 0 16px 40px rgb(13 43 219 / 0.1);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  img {
+    outline: 1px solid rgb(28 36 48 / 0.08);
+    outline-offset: -1px;
+  }
+
+  ::selection {
+    background: rgb(110 180 255 / 0.28);
+  }
+}
+
+@layer components {
+  .glass,
+  .glass-strong,
+  .glass-card {
+    background: var(--color-card);
+    box-shadow: var(--shadow-border);
+  }
+
+  .glass-capsule {
+    background: var(--color-card);
+    box-shadow: var(--shadow-border);
+    border-radius: 9999px;
+  }
+
+  .glass-card {
+    border-radius: 1.5rem;
+    transition: box-shadow 160ms var(--ease-out-soft);
+  }
+  .glass-card:hover {
+    box-shadow: var(--shadow-border-hover);
+  }
+
+  .pill-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    height: 2.7rem;
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: 9999px;
+    background: var(--color-card);
+    box-shadow: 0 0 0 1px rgb(28 36 48 / 0.08);
+    color: #5d6878;
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .pill-nav svg {
+    color: var(--color-tide);
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+  .pill-nav[data-active="true"] {
+    box-shadow: 0 0 0 1.5px var(--color-nazar);
+    color: var(--color-nazar);
+  }
+
+  .icon-ring {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background: var(--color-card);
+    box-shadow: 0 0 0 1px rgb(28 36 48 / 0.1);
+    color: #6b7385;
+  }
+
+  .tab-feed {
+    position: relative;
+    padding-bottom: 0.45rem;
+    font-weight: 600;
+    color: var(--color-nazar);
+  }
+  .tab-feed::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 2.4rem;
+    height: 2px;
+    transform: translateX(-50%);
+    background: var(--color-nazar);
+    border-radius: 99px;
+  }
+  .tab-feed::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 7px;
+    height: 7px;
+    transform: translateX(-50%);
+    background: var(--color-nazar);
+    border-radius: 99px;
+  }
+
+  .vinyl {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9999px;
+    box-shadow: 0 0 0 1px rgb(28 36 48 / 0.08);
+  }
+  .vinyl::after {
+    content: "";
+    position: absolute;
+    inset: 36%;
+    border-radius: 9999px;
+    background: #111318;
+    box-shadow: 0 0 0 2px rgb(255 255 255 / 0.35);
+  }
+
+  .epub-host iframe {
+    width: 100% !important;
+    min-height: 70vh;
+    background: var(--color-card);
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

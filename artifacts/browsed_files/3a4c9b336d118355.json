@@ -1,0 +1,50 @@
+[
+  {
+    "name": "BottomBar.tsx",
+    "path": "src/view/shell/bottom-bar/BottomBar.tsx",
+    "sha": "c33d2b7b8ed03d446393f84f1f0d8087f5e2325c",
+    "size": 17189,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/bottom-bar/BottomBar.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/bottom-bar/BottomBar.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/c33d2b7b8ed03d446393f84f1f0d8087f5e2325c",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/view/shell/bottom-bar/BottomBar.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/bottom-bar/BottomBar.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/c33d2b7b8ed03d446393f84f1f0d8087f5e2325c",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/bottom-bar/BottomBar.tsx"
+    }
+  },
+  {
+    "name": "BottomBarStyles.tsx",
+    "path": "src/view/shell/bottom-bar/BottomBarStyles.tsx",
+    "sha": "ef1a37a29d3dfc1ccbf84bf5968d1f1bdb1d1b3b",
+    "size": 1582,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/bottom-bar/BottomBarStyles.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/bottom-bar/BottomBarStyles.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/ef1a37a29d3dfc1ccbf84bf5968d1f1bdb1d1b3b",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/view/shell/bottom-bar/BottomBarStyles.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/bottom-bar/BottomBarStyles.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/ef1a37a29d3dfc1ccbf84bf5968d1f1bdb1d1b3b",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/bottom-bar/BottomBarStyles.tsx"
+    }
+  },
+  {
+    "name": "BottomBarWeb.tsx",
+    "path": "src/view/shell/bottom-bar/BottomBarWeb.tsx",
+    "sha": "3cb1984fca6d9eb8e768f2de29beb4e86bb08cb8",
+    "size": 12085,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/bottom-bar/BottomBarWeb.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/bottom-bar/BottomBarWeb.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/3cb1984fca6d9eb8e768f2de29beb4e86bb08cb8",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/view/shell/bottom-bar/BottomBarWeb.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/bottom-bar/BottomBarWeb.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/3cb1984fca6d9eb8e768f2de29beb4e86bb08cb8",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/bottom-bar/BottomBarWeb.tsx"
+    }
+  }
+]

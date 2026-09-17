@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Feeds.tsx",
+    "path": "src/view/shell/desktop/Feeds.tsx",
+    "sha": "2babcfbcb0cec0e994658780164829dc20bd5dd0",
+    "size": 6592,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/Feeds.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/Feeds.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/2babcfbcb0cec0e994658780164829dc20bd5dd0",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/view/shell/desktop/Feeds.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/Feeds.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/2babcfbcb0cec0e994658780164829dc20bd5dd0",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/Feeds.tsx"
+    }
+  },
+  {
+    "name": "LeftNav.tsx",
+    "path": "src/view/shell/desktop/LeftNav.tsx",
+    "sha": "7ad99d805fc14ca52d13f51eb6587c42441e12de",
+    "size": 24520,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/LeftNav.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/LeftNav.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/7ad99d805fc14ca52d13f51eb6587c42441e12de",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/view/shell/desktop/LeftNav.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/LeftNav.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/7ad99d805fc14ca52d13f51eb6587c42441e12de",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/LeftNav.tsx"
+    }
+  },
+  {
+    "name": "RightNav.tsx",
+    "path": "src/view/shell/desktop/RightNav.tsx",
+    "sha": "558e3a081b867661c47404991464f3cc938265b5",
+    "size": 5065,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/RightNav.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/RightNav.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/558e3a081b867661c47404991464f3cc938265b5",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/view/shell/desktop/RightNav.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/RightNav.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/558e3a081b867661c47404991464f3cc938265b5",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/RightNav.tsx"
+    }
+  },
+  {
+    "name": "Search.tsx",
+    "path": "src/view/shell/desktop/Search.tsx",
+    "sha": "b36ba52ce117d8459942be3520ae44fe23dd4323",
+    "size": 2582,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/Search.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/Search.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/b36ba52ce117d8459942be3520ae44fe23dd4323",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/view/shell/desktop/Search.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/Search.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/b36ba52ce117d8459942be3520ae44fe23dd4323",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/Search.tsx"
+    }
+  },
+  {
+    "name": "SidebarTrendingTopics.tsx",
+    "path": "src/view/shell/desktop/SidebarTrendingTopics.tsx",
+    "sha": "1196def9cc6a21d8c73c314224018dc9e673047b",
+    "size": 5923,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/SidebarTrendingTopics.tsx?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/SidebarTrendingTopics.tsx",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/1196def9cc6a21d8c73c314224018dc9e673047b",
+    "download_url": "https://raw.githubusercontent.com/bluesky-social/social-app/main/src/view/shell/desktop/SidebarTrendingTopics.tsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/view/shell/desktop/SidebarTrendingTopics.tsx?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/blobs/1196def9cc6a21d8c73c314224018dc9e673047b",
+      "html": "https://github.com/bluesky-social/social-app/blob/main/src/view/shell/desktop/SidebarTrendingTopics.tsx"
+    }
+  }
+]

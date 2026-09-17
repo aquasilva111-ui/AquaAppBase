@@ -1,0 +1,34 @@
+[
+  {
+    "name": "lib",
+    "path": "src/logger/sentry/lib",
+    "sha": "2de4fe50a12ec0671137ebadf58ffd43cdfa0dbc",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/sentry/lib?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/logger/sentry/lib",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/2de4fe50a12ec0671137ebadf58ffd43cdfa0dbc",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/sentry/lib?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/2de4fe50a12ec0671137ebadf58ffd43cdfa0dbc",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/logger/sentry/lib"
+    }
+  },
+  {
+    "name": "setup",
+    "path": "src/logger/sentry/setup",
+    "sha": "845e397cbafd164c39a46f736ad7b4a6828cd52c",
+    "size": 0,
+    "url": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/sentry/setup?ref=main",
+    "html_url": "https://github.com/bluesky-social/social-app/tree/main/src/logger/sentry/setup",
+    "git_url": "https://api.github.com/repos/bluesky-social/social-app/git/trees/845e397cbafd164c39a46f736ad7b4a6828cd52c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/bluesky-social/social-app/contents/src/logger/sentry/setup?ref=main",
+      "git": "https://api.github.com/repos/bluesky-social/social-app/git/trees/845e397cbafd164c39a46f736ad7b4a6828cd52c",
+      "html": "https://github.com/bluesky-social/social-app/tree/main/src/logger/sentry/setup"
+    }
+  }
+]
