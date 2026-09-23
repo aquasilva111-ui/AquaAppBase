@@ -13,6 +13,7 @@ import type {
   Comment,
   ModuleId,
   NotificationItem,
+  PhotoPin,
   Post,
 } from "./types";
 
@@ -31,6 +32,8 @@ interface AquaState {
   unfollows: Record<string, true>;
   joined: Record<string, true>;
   addedPosts: Post[];
+  addedPins: PhotoPin[];
+  savedPins: Record<string, true>;
   comments: Comment[];
   extraMessages: ChatMessage[];
   cart: CartItem[];
@@ -51,6 +54,8 @@ interface AquaState {
   toggleJoin: (communityId: string) => void;
   addComment: (comment: Omit<Comment, "id" | "at" | "authorId">) => void;
   addPost: (post: Omit<Post, "id" | "createdAt" | "authorId" | "likes" | "comments" | "reposts" | "saves">) => void;
+  addPin: (pin: Omit<PhotoPin, "id" | "createdAt" | "authorId" | "saves">) => void;
+  toggleSavePin: (pinId: string) => void;
   sendMessage: (threadId: string, text: string) => void;
   addToCart: (productId: string) => void;
   removeFromCart: (productId: string) => void;
@@ -85,6 +90,8 @@ export const useAqua = create<AquaState>()(
       unfollows: {},
       joined: { mare: true },
       addedPosts: [],
+      addedPins: [],
+      savedPins: {},
       comments: seedComments,
       extraMessages: [],
       cart: [],
@@ -167,6 +174,25 @@ export const useAqua = create<AquaState>()(
         };
         set({ addedPosts: [row, ...get().addedPosts] });
       },
+      addPin: (pin) => {
+        const row: PhotoPin = {
+          ...pin,
+          id: nid("pin"),
+          authorId: ME_ID,
+          createdAt: new Date().toISOString(),
+          saves: 0,
+        };
+        set({ addedPins: [row, ...get().addedPins] });
+      },
+      toggleSavePin: (pinId) => {
+        const savedPins = { ...get().savedPins };
+        if (savedPins[pinId]) delete savedPins[pinId];
+        else {
+          savedPins[pinId] = true;
+          get().track({ type: "save", entityType: "photo", entityId: pinId });
+        }
+        set({ savedPins });
+      },
       sendMessage: (threadId, text) => {
         const row: ChatMessage = {
           id: nid("m"),
@@ -232,6 +258,8 @@ export const useAqua = create<AquaState>()(
         unfollows: s.unfollows,
         joined: s.joined,
         addedPosts: s.addedPosts,
+        addedPins: s.addedPins,
+        savedPins: s.savedPins,
         comments: s.comments,
         extraMessages: s.extraMessages,
         cart: s.cart,

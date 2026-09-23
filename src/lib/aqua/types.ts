@@ -83,6 +83,20 @@ export interface MediaAsset {
   aspect?: "photo" | "square" | "wide" | "cover";
 }
 
+export interface PhotoPin {
+  id: string;
+  authorId: string;
+  title: string;
+  description?: string;
+  src: string;
+  alt: string;
+  ratio: "photo" | "square" | "wide";
+  tags: string[];
+  link?: string;
+  saves: number;
+  createdAt: string;
+}
+
 export interface ExternalRef {
   platform: ExternalPlatform;
   url: string;
@@ -214,7 +228,7 @@ export interface ChatMessage {
 
 export interface Comment {
   id: string;
-  targetType: "post" | "block" | "chapter" | "article" | "product";
+  targetType: "post" | "block" | "chapter" | "article" | "product" | "photo";
   targetId: string;
   authorId: string;
   text: string;
