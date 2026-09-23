@@ -19,6 +19,7 @@ import { Route as DiscoverRouteImport } from './routes/discover'
 import { Route as MarketplaceRouteImport } from './routes/marketplace'
 import { Route as MessagesRouteImport } from './routes/messages'
 import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as PhotosRouteImport } from './routes/photos'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as WikiRouteImport } from './routes/wiki'
@@ -29,6 +30,7 @@ import { Route as CommunitiesCommunityIdRouteImport } from './routes/communities
 import { Route as DirectionLayerRouteImport } from './routes/direction.$layer'
 import { Route as FeedLaneRouteImport } from './routes/feed.$lane'
 import { Route as MessagesThreadIdRouteImport } from './routes/messages.$threadId'
+import { Route as PhotoPhotoIdRouteImport } from './routes/photo.$photoId'
 import { Route as ProductProductIdRouteImport } from './routes/product.$productId'
 import { Route as StudioMediaRouteImport } from './routes/studio.media'
 import { Route as UUsernameRouteImport } from './routes/u.$username'
@@ -86,6 +88,11 @@ const NotificationsRoute = NotificationsRouteImport.update({
   path: '/notifications',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PhotosRoute = PhotosRouteImport.update({
+  id: '/photos',
+  path: '/photos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
@@ -136,6 +143,11 @@ const MessagesThreadIdRoute = MessagesThreadIdRouteImport.update({
   path: '/$threadId',
   getParentRoute: () => MessagesRoute,
 } as any)
+const PhotoPhotoIdRoute = PhotoPhotoIdRouteImport.update({
+  id: '/photo/$photoId',
+  path: '/photo/$photoId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductProductIdRoute = ProductProductIdRouteImport.update({
   id: '/product/$productId',
   path: '/product/$productId',
@@ -178,6 +190,7 @@ export interface FileRoutesByFullPath {
   '/marketplace': typeof MarketplaceRoute
   '/messages': typeof MessagesRouteWithChildren
   '/notifications': typeof NotificationsRoute
+  '/photos': typeof PhotosRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
@@ -188,6 +201,7 @@ export interface FileRoutesByFullPath {
   '/direction/$layer': typeof DirectionLayerRoute
   '/feed/$lane': typeof FeedLaneRoute
   '/messages/$threadId': typeof MessagesThreadIdRoute
+  '/photo/$photoId': typeof PhotoPhotoIdRoute
   '/product/$productId': typeof ProductProductIdRoute
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
@@ -206,6 +220,7 @@ export interface FileRoutesByTo {
   '/marketplace': typeof MarketplaceRoute
   '/messages': typeof MessagesRouteWithChildren
   '/notifications': typeof NotificationsRoute
+  '/photos': typeof PhotosRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
@@ -216,6 +231,7 @@ export interface FileRoutesByTo {
   '/direction/$layer': typeof DirectionLayerRoute
   '/feed/$lane': typeof FeedLaneRoute
   '/messages/$threadId': typeof MessagesThreadIdRoute
+  '/photo/$photoId': typeof PhotoPhotoIdRoute
   '/product/$productId': typeof ProductProductIdRoute
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
@@ -235,6 +251,7 @@ export interface FileRoutesById {
   '/marketplace': typeof MarketplaceRoute
   '/messages': typeof MessagesRouteWithChildren
   '/notifications': typeof NotificationsRoute
+  '/photos': typeof PhotosRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
@@ -245,6 +262,7 @@ export interface FileRoutesById {
   '/direction/$layer': typeof DirectionLayerRoute
   '/feed/$lane': typeof FeedLaneRoute
   '/messages/$threadId': typeof MessagesThreadIdRoute
+  '/photo/$photoId': typeof PhotoPhotoIdRoute
   '/product/$productId': typeof ProductProductIdRoute
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
@@ -265,6 +283,7 @@ export interface FileRouteTypes {
     | '/marketplace'
     | '/messages'
     | '/notifications'
+    | '/photos'
     | '/search'
     | '/studio'
     | '/wiki'
@@ -275,6 +294,7 @@ export interface FileRouteTypes {
     | '/direction/$layer'
     | '/feed/$lane'
     | '/messages/$threadId'
+    | '/photo/$photoId'
     | '/product/$productId'
     | '/studio/media'
     | '/u/$username'
@@ -293,6 +313,7 @@ export interface FileRouteTypes {
     | '/marketplace'
     | '/messages'
     | '/notifications'
+    | '/photos'
     | '/search'
     | '/studio'
     | '/wiki'
@@ -303,6 +324,7 @@ export interface FileRouteTypes {
     | '/direction/$layer'
     | '/feed/$lane'
     | '/messages/$threadId'
+    | '/photo/$photoId'
     | '/product/$productId'
     | '/studio/media'
     | '/u/$username'
@@ -321,6 +343,7 @@ export interface FileRouteTypes {
     | '/marketplace'
     | '/messages'
     | '/notifications'
+    | '/photos'
     | '/search'
     | '/studio'
     | '/wiki'
@@ -331,6 +354,7 @@ export interface FileRouteTypes {
     | '/direction/$layer'
     | '/feed/$lane'
     | '/messages/$threadId'
+    | '/photo/$photoId'
     | '/product/$productId'
     | '/studio/media'
     | '/u/$username'
@@ -350,6 +374,7 @@ export interface RootRouteChildren {
   MarketplaceRoute: typeof MarketplaceRoute
   MessagesRoute: typeof MessagesRouteWithChildren
   NotificationsRoute: typeof NotificationsRoute
+  PhotosRoute: typeof PhotosRoute
   SearchRoute: typeof SearchRoute
   StudioRoute: typeof StudioRouteWithChildren
   WikiRoute: typeof WikiRouteWithChildren
@@ -357,6 +382,7 @@ export interface RootRouteChildren {
   BookBookIdRoute: typeof BookBookIdRoute
   DirectionLayerRoute: typeof DirectionLayerRoute
   FeedLaneRoute: typeof FeedLaneRoute
+  PhotoPhotoIdRoute: typeof PhotoPhotoIdRoute
   ProductProductIdRoute: typeof ProductProductIdRoute
   UUsernameRoute: typeof UUsernameRouteWithChildren
   ReadBookIdChapterIdRoute: typeof ReadBookIdChapterIdRoute
@@ -434,6 +460,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NotificationsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/photos': {
+      id: '/photos'
+      path: '/photos'
+      fullPath: '/photos'
+      preLoaderRoute: typeof PhotosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/search': {
       id: '/search'
       path: '/search'
@@ -477,7 +510,7 @@ declare module '@tanstack/react-router' {
       parentRoute: typeof BooksRoute
     }
     '/communities/$communityId': {
-      id: '/communities/$communityId'
+      id: '/$communityId'
       path: '/$communityId'
       fullPath: '/communities/$communityId'
       preLoaderRoute: typeof CommunitiesCommunityIdRouteImport
@@ -498,11 +531,18 @@ declare module '@tanstack/react-router' {
       parentRoute: typeof rootRouteImport
     }
     '/messages/$threadId': {
-      id: '/messages/$threadId'
+      id: '/$threadId'
       path: '/$threadId'
       fullPath: '/messages/$threadId'
       preLoaderRoute: typeof MessagesThreadIdRouteImport
       parentRoute: typeof MessagesRoute
+    }
+    '/photo/$photoId': {
+      id: '/photo/$photoId'
+      path: '/photo/$photoId'
+      fullPath: '/photo/$photoId'
+      preLoaderRoute: typeof PhotoPhotoIdRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/product/$productId': {
       id: '/product/$productId'
@@ -526,7 +566,7 @@ declare module '@tanstack/react-router' {
       parentRoute: typeof rootRouteImport
     }
     '/wiki/$articleId': {
-      id: '/wiki/$articleId'
+      id: '/$articleId'
       path: '/$articleId'
       fullPath: '/wiki/$articleId'
       preLoaderRoute: typeof WikiArticleIdRouteImport
@@ -627,6 +667,7 @@ const rootRouteChildren: RootRouteChildren = {
   MarketplaceRoute: MarketplaceRoute,
   MessagesRoute: MessagesRouteWithChildren,
   NotificationsRoute: NotificationsRoute,
+  PhotosRoute: PhotosRoute,
   SearchRoute: SearchRoute,
   StudioRoute: StudioRouteWithChildren,
   WikiRoute: WikiRouteWithChildren,
@@ -634,6 +675,7 @@ const rootRouteChildren: RootRouteChildren = {
   BookBookIdRoute: BookBookIdRoute,
   DirectionLayerRoute: DirectionLayerRoute,
   FeedLaneRoute: FeedLaneRoute,
+  PhotoPhotoIdRoute: PhotoPhotoIdRoute,
   ProductProductIdRoute: ProductProductIdRoute,
   UUsernameRoute: UUsernameRouteWithChildren,
   ReadBookIdChapterIdRoute: ReadBookIdChapterIdRoute,
