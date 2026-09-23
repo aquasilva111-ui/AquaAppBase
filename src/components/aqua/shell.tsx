@@ -39,7 +39,7 @@ const PILLS: { label: string; to: string; icon: typeof BookOpen }[] = [
   { label: "Profiles", to: "/search", icon: UserRound },
   { label: "AI", to: "/direction/ai", icon: Sparkles },
   { label: "Books", to: "/books", icon: BookOpen },
-  { label: "Photos", to: "/studio/media", icon: ImageIcon },
+  { label: "Photos", to: "/photos", icon: ImageIcon },
   { label: "Videos", to: "/feed/music", icon: Play },
   { label: "Movies", to: "/direction/live", icon: Clapperboard },
   { label: "Live", to: "/direction/live", icon: Radio },
