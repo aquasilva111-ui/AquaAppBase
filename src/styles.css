@@ -95,6 +95,10 @@
 }
 
 @layer components {
+  .font-display {
+    letter-spacing: -0.025em;
+  }
+
   .glass,
   .glass-strong,
   .glass-card {
