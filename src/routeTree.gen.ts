@@ -24,6 +24,7 @@ import { Route as SearchRouteImport } from './routes/search'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as WikiRouteImport } from './routes/wiki'
 import { Route as WriteRouteImport } from './routes/write'
+import { Route as ApiHealthRouteImport } from './routes/api/health'
 import { Route as BookBookIdRouteImport } from './routes/book.$bookId'
 import { Route as BooksLibraryRouteImport } from './routes/books.library'
 import { Route as CommunitiesCommunityIdRouteImport } from './routes/communities.$communityId'
@@ -113,6 +114,11 @@ const WikiRoute = WikiRouteImport.update({
 const WriteRoute = WriteRouteImport.update({
   id: '/write',
   path: '/write',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiHealthRoute = ApiHealthRouteImport.update({
+  id: '/api/health',
+  path: '/api/health',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BookBookIdRoute = BookBookIdRouteImport.update({
@@ -207,6 +213,7 @@ export interface FileRoutesByFullPath {
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
   '/write': typeof WriteRoute
+  '/api/health': typeof ApiHealthRoute
   '/book/$bookId': typeof BookBookIdRoute
   '/books/library': typeof BooksLibraryRoute
   '/communities/$communityId': typeof CommunitiesCommunityIdRoute
@@ -239,6 +246,7 @@ export interface FileRoutesByTo {
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
   '/write': typeof WriteRoute
+  '/api/health': typeof ApiHealthRoute
   '/book/$bookId': typeof BookBookIdRoute
   '/books/library': typeof BooksLibraryRoute
   '/communities/$communityId': typeof CommunitiesCommunityIdRoute
@@ -272,6 +280,7 @@ export interface FileRoutesById {
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
   '/write': typeof WriteRoute
+  '/api/health': typeof ApiHealthRoute
   '/book/$bookId': typeof BookBookIdRoute
   '/books/library': typeof BooksLibraryRoute
   '/communities/$communityId': typeof CommunitiesCommunityIdRoute
@@ -306,6 +315,7 @@ export interface FileRouteTypes {
     | '/studio'
     | '/wiki'
     | '/write'
+    | '/api/health'
     | '/book/$bookId'
     | '/books/library'
     | '/communities/$communityId'
@@ -338,6 +348,7 @@ export interface FileRouteTypes {
     | '/studio'
     | '/wiki'
     | '/write'
+    | '/api/health'
     | '/book/$bookId'
     | '/books/library'
     | '/communities/$communityId'
@@ -370,6 +381,7 @@ export interface FileRouteTypes {
     | '/studio'
     | '/wiki'
     | '/write'
+    | '/api/health'
     | '/book/$bookId'
     | '/books/library'
     | '/communities/$communityId'
@@ -403,6 +415,7 @@ export interface RootRouteChildren {
   StudioRoute: typeof StudioRouteWithChildren
   WikiRoute: typeof WikiRouteWithChildren
   WriteRoute: typeof WriteRoute
+  ApiHealthRoute: typeof ApiHealthRoute
   BookBookIdRoute: typeof BookBookIdRoute
   DirectionLayerRoute: typeof DirectionLayerRoute
   FeedLaneRoute: typeof FeedLaneRoute
@@ -519,6 +532,13 @@ declare module '@tanstack/react-router' {
       path: '/write'
       fullPath: '/write'
       preLoaderRoute: typeof WriteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/health': {
+      id: '/api/health'
+      path: '/api/health'
+      fullPath: '/api/health'
+      preLoaderRoute: typeof ApiHealthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/book/$bookId': {
@@ -712,6 +732,7 @@ const rootRouteChildren: RootRouteChildren = {
   StudioRoute: StudioRouteWithChildren,
   WikiRoute: WikiRouteWithChildren,
   WriteRoute: WriteRoute,
+  ApiHealthRoute: ApiHealthRoute,
   BookBookIdRoute: BookBookIdRoute,
   DirectionLayerRoute: DirectionLayerRoute,
   FeedLaneRoute: FeedLaneRoute,
