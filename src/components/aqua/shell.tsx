@@ -35,6 +35,7 @@ import { usePlayer } from "@/lib/aqua/player";
 import { useAqua } from "@/lib/aqua/store";
 import { trackForCover, tracks } from "@/lib/aqua/tracks";
 import { cn } from "@/lib/utils";
+import { Moon, Sun } from "lucide-react";
 
 const me = getProfile("samuel")!;
 
@@ -64,6 +65,7 @@ export function AppShell() {
 
   return (
     <div className="relative min-h-dvh bg-background">
+      <FloatingBackdrop />
       <div className="mx-auto max-w-[1240px] px-3 pt-16 pb-28 lg:px-6 lg:pt-6 lg:pb-10">
         <DesktopHeader />
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[168px_minmax(0,1fr)_268px]">
@@ -96,12 +98,79 @@ function DesktopHeader() {
   );
 }
 
+function ThemeToggle({ compact }: { compact?: boolean }) {
+  const [dark, setDark] = useState(false);
+  useEffect(() => {
+    setDark(document.documentElement.classList.contains("dark"));
+  }, []);
+  const toggle = () => {
+    const next = !dark;
+    setDark(next);
+    document.documentElement.classList.toggle("dark", next);
+    try {
+      localStorage.setItem("aqua-theme", next ? "dark" : "light");
+    } catch {
+      /* storage unavailable */
+    }
+  };
+  return (
+    <button
+      type="button"
+      aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+      onClick={toggle}
+      className={cn(
+        "flex items-center justify-center rounded-full text-muted-foreground",
+        compact ? "size-8 bg-card shadow-[0_0_0_1px_rgb(28_36_48/0.1)]" : "icon-ring",
+      )}
+    >
+      {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
+    </button>
+  );
+}
+
+/** Ambient floating gradient blobs, always behind the shell content. */
+function FloatingBackdrop() {
+  return (
+    <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <span
+        className="aqua-blob top-[6%] left-[4%] h-[36rem] w-[36rem]"
+        style={{ ["--blob" as string]: "222 88% 55%", animationDuration: "26s" }}
+      />
+      <span
+        className="aqua-blob top-[38%] right-[2%] h-[30rem] w-[30rem]"
+        style={{
+          ["--blob" as string]: "200 85% 68%",
+          animationDuration: "20s",
+          animationDelay: "-8s",
+        }}
+      />
+      <span
+        className="aqua-blob bottom-[4%] left-[30%] h-[28rem] w-[28rem]"
+        style={{
+          ["--blob" as string]: "230 90% 74%",
+          animationDuration: "30s",
+          animationDelay: "-16s",
+        }}
+      />
+      <span
+        className="aqua-blob top-[58%] left-[6%] h-[22rem] w-[22rem]"
+        style={{
+          ["--blob" as string]: "42 70% 82%",
+          animationDuration: "24s",
+          animationDelay: "-4s",
+        }}
+      />
+    </div>
+  );
+}
+
 function TopActions() {
   const setComposer = useAqua((s) => s.setComposerOpen);
   const unread = useAqua((s) => s.notifications.filter((n) => n.unread).length);
   return (
     <div className="flex items-center justify-end gap-2">
       <PlayerSlot />
+      <ThemeToggle />
       <button type="button" aria-label="Create" onClick={() => setComposer(true)} className="icon-ring">
         <Plus className="size-4" />
       </button>
@@ -272,6 +341,7 @@ function MobileTop() {
           </div>
         </form>
         <PlayerSlot />
+        <ThemeToggle compact />
       </div>
     </header>
   );

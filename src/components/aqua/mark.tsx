@@ -24,7 +24,7 @@ export function NazarMark({
       src={AQUA_LOGO_SRC}
       alt={title ?? ""}
       aria-hidden={title ? undefined : true}
-      className={cn("block h-8 w-auto max-w-full object-contain", className)}
+      className={cn("block h-8 w-auto max-w-full object-contain outline-none", className)}
     />
   );
 }

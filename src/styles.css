@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans:
     "Helvetica Now Display", "Helvetica Neue", "Helvetica Display", Helvetica, Arial, ui-sans-serif,
@@ -9,7 +11,7 @@
     system-ui, sans-serif;
 
   --color-background: #f7f8fc;
-  --color-foreground: #1c2430;
+  --color-foreground: #000000;
   --color-card: #ffffff;
   --color-card-foreground: #1c2430;
   --color-primary: #5aa8ff;
@@ -50,6 +52,39 @@
   --shadow-float: 0 16px 40px rgb(13 43 219 / 0.1);
 
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Dark mode — pure white letters, no subtints. */
+.dark {
+  --color-background: #05070c;
+  --color-foreground: #ffffff;
+  --color-card: #10141c;
+  --color-card-foreground: #ffffff;
+  --color-muted: #161b25;
+  --color-muted-foreground: #a8b2c2;
+  --color-secondary: #141b28;
+  --color-secondary-foreground: #9cc4ff;
+  --color-foam: #161d2a;
+  --color-nazar: #5aa8ff;
+  --color-deep: #7ec8f5;
+  --color-tide: #6eb4ff;
+  --color-iris: #7ec8f5;
+
+  --shadow-border:
+    0 0 0 1px rgb(255 255 255 / 0.09),
+    0 1px 2px rgb(0 0 0 / 0.5),
+    0 10px 28px rgb(0 0 0 / 0.45);
+  --shadow-border-hover:
+    0 0 0 1px rgb(110 180 255 / 0.35),
+    0 10px 28px rgb(0 0 0 / 0.55);
+  --shadow-glass: 0 8px 24px rgb(0 0 0 / 0.5);
+  --shadow-glass-hover: 0 12px 32px rgb(0 0 0 / 0.55);
+  --shadow-float: 0 16px 40px rgb(0 0 0 / 0.6);
+}
+
+/* Light chips declared with bg-white turn into dark cards in dark mode. */
+.dark .bg-white {
+  background-color: var(--color-card);
 }
 
 @layer base {
@@ -310,5 +345,35 @@
   to {
     transform: scale(1) translateY(-4%);
     opacity: 1;
+  }
+}
+
+/* Floating ambient backdrop — soft drifting gradient blobs behind the shell. */
+.aqua-blob {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 35% 35%,
+    hsl(var(--blob) / 0.5),
+    transparent 68%
+  );
+  filter: blur(72px);
+  opacity: 0.55;
+  animation: aqua-float 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.dark .aqua-blob {
+  opacity: 0.32;
+}
+
+@keyframes aqua-float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(3rem, -2.4rem, 0) scale(1.12) rotate(8deg);
+  }
+  100% {
+    transform: translate3d(-2.2rem, 2.6rem, 0) scale(0.94) rotate(-6deg);
   }
 }
