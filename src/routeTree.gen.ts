@@ -35,6 +35,7 @@ import { Route as ProductProductIdRouteImport } from './routes/product.$productI
 import { Route as StudioMediaRouteImport } from './routes/studio.media'
 import { Route as UUsernameRouteImport } from './routes/u.$username'
 import { Route as WikiArticleIdRouteImport } from './routes/wiki.$articleId'
+import { Route as ApiFedAtRouteImport } from './routes/api/fed/at'
 import { Route as ReadBookIdChapterIdRouteImport } from './routes/read.$bookId.$chapterId'
 import { Route as UUsernameShopRouteImport } from './routes/u.$username.shop'
 
@@ -168,6 +169,11 @@ const WikiArticleIdRoute = WikiArticleIdRouteImport.update({
   path: '/$articleId',
   getParentRoute: () => WikiRoute,
 } as any)
+const ApiFedAtRoute = ApiFedAtRouteImport.update({
+  id: '/api/fed/at',
+  path: '/api/fed/at',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ReadBookIdChapterIdRoute = ReadBookIdChapterIdRouteImport.update({
   id: '/read/$bookId/$chapterId',
   path: '/read/$bookId/$chapterId',
@@ -206,6 +212,7 @@ export interface FileRoutesByFullPath {
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
   '/wiki/$articleId': typeof WikiArticleIdRoute
+  '/api/fed/at': typeof ApiFedAtRoute
   '/read/$bookId/$chapterId': typeof ReadBookIdChapterIdRoute
   '/u/$username/shop': typeof UUsernameShopRoute
 }
@@ -236,6 +243,7 @@ export interface FileRoutesByTo {
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
   '/wiki/$articleId': typeof WikiArticleIdRoute
+  '/api/fed/at': typeof ApiFedAtRoute
   '/read/$bookId/$chapterId': typeof ReadBookIdChapterIdRoute
   '/u/$username/shop': typeof UUsernameShopRoute
 }
@@ -267,6 +275,7 @@ export interface FileRoutesById {
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
   '/wiki/$articleId': typeof WikiArticleIdRoute
+  '/api/fed/at': typeof ApiFedAtRoute
   '/read/$bookId/$chapterId': typeof ReadBookIdChapterIdRoute
   '/u/$username/shop': typeof UUsernameShopRoute
 }
@@ -299,6 +308,7 @@ export interface FileRouteTypes {
     | '/studio/media'
     | '/u/$username'
     | '/wiki/$articleId'
+    | '/api/fed/at'
     | '/read/$bookId/$chapterId'
     | '/u/$username/shop'
   fileRoutesByTo: FileRoutesByTo
@@ -329,6 +339,7 @@ export interface FileRouteTypes {
     | '/studio/media'
     | '/u/$username'
     | '/wiki/$articleId'
+    | '/api/fed/at'
     | '/read/$bookId/$chapterId'
     | '/u/$username/shop'
   id:
@@ -359,6 +370,7 @@ export interface FileRouteTypes {
     | '/studio/media'
     | '/u/$username'
     | '/wiki/$articleId'
+    | '/api/fed/at'
     | '/read/$bookId/$chapterId'
     | '/u/$username/shop'
   fileRoutesById: FileRoutesById
@@ -385,6 +397,7 @@ export interface RootRouteChildren {
   PostPostIdRoute: typeof PostPostIdRoute
   ProductProductIdRoute: typeof ProductProductIdRoute
   UUsernameRoute: typeof UUsernameRouteWithChildren
+  ApiFedAtRoute: typeof ApiFedAtRoute
   ReadBookIdChapterIdRoute: typeof ReadBookIdChapterIdRoute
 }
 
@@ -572,6 +585,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WikiArticleIdRouteImport
       parentRoute: typeof WikiRoute
     }
+    '/api/fed/at': {
+      id: '/api/fed/at'
+      path: '/api/fed/at'
+      fullPath: '/api/fed/at'
+      preLoaderRoute: typeof ApiFedAtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/read/$bookId/$chapterId': {
       id: '/read/$bookId/$chapterId'
       path: '/read/$bookId/$chapterId'
@@ -678,6 +698,7 @@ const rootRouteChildren: RootRouteChildren = {
   PostPostIdRoute: PostPostIdRoute,
   ProductProductIdRoute: ProductProductIdRoute,
   UUsernameRoute: UUsernameRouteWithChildren,
+  ApiFedAtRoute: ApiFedAtRoute,
   ReadBookIdChapterIdRoute: ReadBookIdChapterIdRoute,
 }
 export const routeTree = rootRouteImport
