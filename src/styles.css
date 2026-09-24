@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans:
+    "Helvetica Now Display", "Helvetica Neue", "Helvetica Display", Helvetica, Arial, ui-sans-serif,
+    system-ui, sans-serif;
+  --font-display:
+    "Helvetica Now Display", "Helvetica Neue", "Helvetica Display", Helvetica, Arial, ui-sans-serif,
+    system-ui, sans-serif;
 
   --color-background: #f7f8fc;
   --color-foreground: #1c2430;
@@ -39,12 +43,8 @@
   --radius-4xl: 2.5rem;
 
   --shadow-border:
-    0 0 0 1px rgb(28 36 48 / 0.06),
-    0 1px 2px rgb(28 36 48 / 0.04),
-    0 10px 28px rgb(28 36 48 / 0.04);
-  --shadow-border-hover:
-    0 0 0 1px rgb(13 43 219 / 0.18),
-    0 10px 28px rgb(13 43 219 / 0.08);
+    0 0 0 1px rgb(28 36 48 / 0.06), 0 1px 2px rgb(28 36 48 / 0.04), 0 10px 28px rgb(28 36 48 / 0.04);
+  --shadow-border-hover: 0 0 0 1px rgb(13 43 219 / 0.18), 0 10px 28px rgb(13 43 219 / 0.08);
   --shadow-glass: 0 8px 24px rgb(13 43 219 / 0.05);
   --shadow-glass-hover: 0 12px 32px rgb(13 43 219 / 0.09);
   --shadow-float: 0 16px 40px rgb(13 43 219 / 0.1);
@@ -210,6 +210,75 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .aqua-orb {
+    --level: 0;
+    --orb-hue: 215;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background: var(--color-card);
+    box-shadow: 0 0 0 1px rgb(28 36 48 / 0.1);
+    touch-action: none;
+    user-select: none;
+    transition: transform 180ms var(--ease-out-soft);
+  }
+  .aqua-orb:active {
+    transform: scale(0.94);
+  }
+  .aqua-orb[data-active]::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 9999px;
+    background: conic-gradient(
+      hsl(var(--orb-hue) 85% 60%),
+      hsl(calc(var(--orb-hue) + 40) 80% 72%),
+      hsl(calc(var(--orb-hue) - 30) 85% 55%),
+      hsl(var(--orb-hue) 85% 60%)
+    );
+    animation: aqua-orb-spin 2.8s linear infinite;
+    filter: blur(1.5px);
+    opacity: calc(0.35 + var(--level) * 1.5);
+    scale: calc(1 + var(--level) * 0.55);
+    z-index: -1;
+  }
+  .aqua-orb-liquid {
+    position: absolute;
+    inset: 3px;
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle at 30% 30%,
+      hsl(var(--orb-hue) 85% 65% / 0.9),
+      hsl(calc(var(--orb-hue) + 40) 80% 55% / 0.65)
+    );
+    animation: aqua-orb-wave 1.1s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+  .aqua-seek {
+    appearance: none;
+    height: 5px;
+    border-radius: 9999px;
+    background: linear-gradient(
+      to right,
+      var(--color-nazar) var(--progress, 0%),
+      rgb(28 36 48 / 0.12) var(--progress, 0%)
+    );
+    outline: none;
+  }
+  .aqua-seek::-webkit-slider-thumb {
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 9999px;
+    background: var(--color-nazar);
+    box-shadow: 0 0 0 2.5px var(--color-card);
+  }
+  .aqua-seek:disabled {
+    opacity: 0.5;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -220,5 +289,22 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@keyframes aqua-orb-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes aqua-orb-wave {
+  from {
+    transform: scale(0.55) translateY(8%);
+    opacity: 0.65;
+  }
+  to {
+    transform: scale(1) translateY(-4%);
+    opacity: 1;
   }
 }

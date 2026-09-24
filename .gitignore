@@ -3,6 +3,7 @@ node_modules
 .grok
 .output
 .vinxi
+.vercel
 dist
 .env
 .env.local

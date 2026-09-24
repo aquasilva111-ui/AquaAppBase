@@ -15,22 +15,11 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#EEF4FF" },
       {
         name: "description",
-        content:
-          "AQUA is a modular social platform that stores relationships, not possessions.",
+        content: "AQUA is a modular social platform that stores relationships, not possessions.",
       },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@360;400;500;600;700&display=swap",
-      },
       { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },

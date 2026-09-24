@@ -3,14 +3,36 @@ import { BookCard } from "@/components/aqua/cards";
 import { PageTitle } from "@/components/aqua/shell";
 import { books, getBook, getProfile, isEpubBook } from "@/lib/aqua/catalog";
 import { useAqua } from "@/lib/aqua/store";
+import type { Book, Chapter, ReadingBlock } from "@/lib/aqua/types";
+
+interface HighlightEntry {
+  book: Book;
+  chapter: Chapter;
+  block: ReadingBlock;
+}
+
+function collectHighlights(ids: string[]): HighlightEntry[] {
+  const entries: HighlightEntry[] = [];
+  for (const id of ids) {
+    for (const book of books) {
+      for (const chapter of book.chapters) {
+        const block = chapter.blocks.find((b) => b.id === id);
+        if (block?.text) entries.push({ book, chapter, block });
+      }
+    }
+  }
+  return entries;
+}
 
 export function BooksLibrary() {
   const reading = useAqua((s) => s.reading);
+  const highlights = useAqua((s) => s.highlights);
   const native = books.filter((b) => !isEpubBook(b));
   const imported = books.filter(isEpubBook);
   const resumes = Object.entries(reading)
     .map(([id, cursor]) => ({ book: getBook(id), cursor }))
     .filter((x) => x.book);
+  const highlightEntries = collectHighlights(Object.keys(highlights));
 
   return (
     <div>
@@ -47,6 +69,27 @@ export function BooksLibrary() {
                 </Link>
               );
             })}
+          </div>
+        </section>
+      )}
+
+      {highlightEntries.length > 0 && (
+        <section className="mb-8">
+          <h2 className="mb-3 text-sm font-semibold tracking-wide text-nazar uppercase">Highlights</h2>
+          <div className="grid gap-3">
+            {highlightEntries.map(({ book, chapter, block }) => (
+              <Link
+                key={block.id}
+                to="/read/$bookId/$chapterId"
+                params={{ bookId: book.id, chapterId: chapter.id }}
+                className="glass-card block p-4"
+              >
+                <p className="border-l-2 border-iris pl-3 text-sm italic">{block.text}</p>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  {book.title} · {chapter.title}
+                </p>
+              </Link>
+            ))}
           </div>
         </section>
       )}

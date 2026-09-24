@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { PersonChip } from "@/components/aqua/cards";
@@ -14,8 +14,10 @@ export function CommentThread({
   targetType: Comment["targetType"];
   targetId: string;
 }) {
-  const comments = useAqua((s) =>
-    s.comments.filter((c) => c.targetType === targetType && c.targetId === targetId),
+  const all = useAqua((s) => s.comments);
+  const comments = useMemo(
+    () => all.filter((c) => c.targetType === targetType && c.targetId === targetId),
+    [all, targetType, targetId],
   );
   const add = useAqua((s) => s.addComment);
   const [text, setText] = useState("");

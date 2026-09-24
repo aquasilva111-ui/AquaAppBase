@@ -22,7 +22,8 @@ export function EpubPane({ url, bookId }: { url: string; bookId: string }) {
       });
       rendition.themes.default({
         body: {
-          fontFamily: "Fraunces, Georgia, serif",
+          fontFamily:
+            '"Helvetica Now Display", "Helvetica Neue", "Helvetica Display", Helvetica, Arial, sans-serif',
           fontSize: "1.15rem",
           lineHeight: "1.75",
           color: "#1c2430",

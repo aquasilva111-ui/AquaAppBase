@@ -19,6 +19,7 @@ import { Route as DiscoverRouteImport } from './routes/discover'
 import { Route as MarketplaceRouteImport } from './routes/marketplace'
 import { Route as MessagesRouteImport } from './routes/messages'
 import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as SavedRouteImport } from './routes/saved'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as WikiRouteImport } from './routes/wiki'
@@ -29,6 +30,7 @@ import { Route as CommunitiesCommunityIdRouteImport } from './routes/communities
 import { Route as DirectionLayerRouteImport } from './routes/direction.$layer'
 import { Route as FeedLaneRouteImport } from './routes/feed.$lane'
 import { Route as MessagesThreadIdRouteImport } from './routes/messages.$threadId'
+import { Route as PostPostIdRouteImport } from './routes/post.$postId'
 import { Route as ProductProductIdRouteImport } from './routes/product.$productId'
 import { Route as StudioMediaRouteImport } from './routes/studio.media'
 import { Route as UUsernameRouteImport } from './routes/u.$username'
@@ -86,6 +88,11 @@ const NotificationsRoute = NotificationsRouteImport.update({
   path: '/notifications',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SavedRoute = SavedRouteImport.update({
+  id: '/saved',
+  path: '/saved',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
@@ -136,6 +143,11 @@ const MessagesThreadIdRoute = MessagesThreadIdRouteImport.update({
   path: '/$threadId',
   getParentRoute: () => MessagesRoute,
 } as any)
+const PostPostIdRoute = PostPostIdRouteImport.update({
+  id: '/post/$postId',
+  path: '/post/$postId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductProductIdRoute = ProductProductIdRouteImport.update({
   id: '/product/$productId',
   path: '/product/$productId',
@@ -178,6 +190,7 @@ export interface FileRoutesByFullPath {
   '/marketplace': typeof MarketplaceRoute
   '/messages': typeof MessagesRouteWithChildren
   '/notifications': typeof NotificationsRoute
+  '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
@@ -188,6 +201,7 @@ export interface FileRoutesByFullPath {
   '/direction/$layer': typeof DirectionLayerRoute
   '/feed/$lane': typeof FeedLaneRoute
   '/messages/$threadId': typeof MessagesThreadIdRoute
+  '/post/$postId': typeof PostPostIdRoute
   '/product/$productId': typeof ProductProductIdRoute
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
@@ -206,6 +220,7 @@ export interface FileRoutesByTo {
   '/marketplace': typeof MarketplaceRoute
   '/messages': typeof MessagesRouteWithChildren
   '/notifications': typeof NotificationsRoute
+  '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
@@ -216,6 +231,7 @@ export interface FileRoutesByTo {
   '/direction/$layer': typeof DirectionLayerRoute
   '/feed/$lane': typeof FeedLaneRoute
   '/messages/$threadId': typeof MessagesThreadIdRoute
+  '/post/$postId': typeof PostPostIdRoute
   '/product/$productId': typeof ProductProductIdRoute
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
@@ -235,6 +251,7 @@ export interface FileRoutesById {
   '/marketplace': typeof MarketplaceRoute
   '/messages': typeof MessagesRouteWithChildren
   '/notifications': typeof NotificationsRoute
+  '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRouteWithChildren
   '/wiki': typeof WikiRouteWithChildren
@@ -245,6 +262,7 @@ export interface FileRoutesById {
   '/direction/$layer': typeof DirectionLayerRoute
   '/feed/$lane': typeof FeedLaneRoute
   '/messages/$threadId': typeof MessagesThreadIdRoute
+  '/post/$postId': typeof PostPostIdRoute
   '/product/$productId': typeof ProductProductIdRoute
   '/studio/media': typeof StudioMediaRoute
   '/u/$username': typeof UUsernameRouteWithChildren
@@ -265,6 +283,7 @@ export interface FileRouteTypes {
     | '/marketplace'
     | '/messages'
     | '/notifications'
+    | '/saved'
     | '/search'
     | '/studio'
     | '/wiki'
@@ -275,6 +294,7 @@ export interface FileRouteTypes {
     | '/direction/$layer'
     | '/feed/$lane'
     | '/messages/$threadId'
+    | '/post/$postId'
     | '/product/$productId'
     | '/studio/media'
     | '/u/$username'
@@ -293,6 +313,7 @@ export interface FileRouteTypes {
     | '/marketplace'
     | '/messages'
     | '/notifications'
+    | '/saved'
     | '/search'
     | '/studio'
     | '/wiki'
@@ -303,6 +324,7 @@ export interface FileRouteTypes {
     | '/direction/$layer'
     | '/feed/$lane'
     | '/messages/$threadId'
+    | '/post/$postId'
     | '/product/$productId'
     | '/studio/media'
     | '/u/$username'
@@ -321,6 +343,7 @@ export interface FileRouteTypes {
     | '/marketplace'
     | '/messages'
     | '/notifications'
+    | '/saved'
     | '/search'
     | '/studio'
     | '/wiki'
@@ -331,6 +354,7 @@ export interface FileRouteTypes {
     | '/direction/$layer'
     | '/feed/$lane'
     | '/messages/$threadId'
+    | '/post/$postId'
     | '/product/$productId'
     | '/studio/media'
     | '/u/$username'
@@ -350,6 +374,7 @@ export interface RootRouteChildren {
   MarketplaceRoute: typeof MarketplaceRoute
   MessagesRoute: typeof MessagesRouteWithChildren
   NotificationsRoute: typeof NotificationsRoute
+  SavedRoute: typeof SavedRoute
   SearchRoute: typeof SearchRoute
   StudioRoute: typeof StudioRouteWithChildren
   WikiRoute: typeof WikiRouteWithChildren
@@ -357,6 +382,7 @@ export interface RootRouteChildren {
   BookBookIdRoute: typeof BookBookIdRoute
   DirectionLayerRoute: typeof DirectionLayerRoute
   FeedLaneRoute: typeof FeedLaneRoute
+  PostPostIdRoute: typeof PostPostIdRoute
   ProductProductIdRoute: typeof ProductProductIdRoute
   UUsernameRoute: typeof UUsernameRouteWithChildren
   ReadBookIdChapterIdRoute: typeof ReadBookIdChapterIdRoute
@@ -434,6 +460,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NotificationsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/saved': {
+      id: '/saved'
+      path: '/saved'
+      fullPath: '/saved'
+      preLoaderRoute: typeof SavedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/search': {
       id: '/search'
       path: '/search'
@@ -503,6 +536,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/messages/$threadId'
       preLoaderRoute: typeof MessagesThreadIdRouteImport
       parentRoute: typeof MessagesRoute
+    }
+    '/post/$postId': {
+      id: '/post/$postId'
+      path: '/post/$postId'
+      fullPath: '/post/$postId'
+      preLoaderRoute: typeof PostPostIdRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/product/$productId': {
       id: '/product/$productId'
@@ -627,6 +667,7 @@ const rootRouteChildren: RootRouteChildren = {
   MarketplaceRoute: MarketplaceRoute,
   MessagesRoute: MessagesRouteWithChildren,
   NotificationsRoute: NotificationsRoute,
+  SavedRoute: SavedRoute,
   SearchRoute: SearchRoute,
   StudioRoute: StudioRouteWithChildren,
   WikiRoute: WikiRouteWithChildren,
@@ -634,6 +675,7 @@ const rootRouteChildren: RootRouteChildren = {
   BookBookIdRoute: BookBookIdRoute,
   DirectionLayerRoute: DirectionLayerRoute,
   FeedLaneRoute: FeedLaneRoute,
+  PostPostIdRoute: PostPostIdRoute,
   ProductProductIdRoute: ProductProductIdRoute,
   UUsernameRoute: UUsernameRouteWithChildren,
   ReadBookIdChapterIdRoute: ReadBookIdChapterIdRoute,

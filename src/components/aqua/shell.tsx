@@ -28,9 +28,12 @@ import { Toaster } from "sonner";
 import { Composer } from "@/components/aqua/composer";
 import { AppDrawer } from "@/components/aqua/drawer";
 import { NazarMark, ProfileAvatar } from "@/components/aqua/mark";
+import { PlayerDock, PlayerSlot } from "@/components/aqua/player";
 import { Input } from "@/components/ui/input";
 import { books, getProfile, media } from "@/lib/aqua/catalog";
+import { usePlayer } from "@/lib/aqua/player";
 import { useAqua } from "@/lib/aqua/store";
+import { trackForCover, tracks } from "@/lib/aqua/tracks";
 import { cn } from "@/lib/utils";
 
 const me = getProfile("samuel")!;
@@ -75,6 +78,7 @@ export function AppShell() {
       <BottomNav />
       <Composer />
       <AppDrawer />
+      <PlayerDock />
       <Toaster position="top-center" richColors={false} />
     </div>
   );
@@ -83,8 +87,8 @@ export function AppShell() {
 function DesktopHeader() {
   return (
     <div className="mb-6 hidden items-center gap-6 lg:grid lg:grid-cols-[168px_minmax(0,1fr)_268px]">
-      <Link to="/" aria-label="AQUA home" className="ml-1 w-fit">
-        <NazarMark className="size-12" title="AQUA" />
+      <Link to="/" aria-label="AQUA home" className="ml-1 flex w-fit items-center">
+        <NazarMark className="h-10 w-auto max-w-[9.5rem]" title="AQUA" />
       </Link>
       <FeedChrome />
       <TopActions />
@@ -97,6 +101,7 @@ function TopActions() {
   const unread = useAqua((s) => s.notifications.filter((n) => n.unread).length);
   return (
     <div className="flex items-center justify-end gap-2">
+      <PlayerSlot />
       <button type="button" aria-label="Create" onClick={() => setComposer(true)} className="icon-ring">
         <Plus className="size-4" />
       </button>
@@ -138,7 +143,10 @@ function SidePills() {
 }
 
 function RightRail() {
-  const [playing, setPlaying] = useState(false);
+  const status = usePlayer((s) => s.status);
+  const play = usePlayer((s) => s.play);
+  const toggle = usePlayer((s) => s.toggle);
+  const playing = status === "playing" || status === "live";
   const tiles = [
     ...books.map((b) => ({ id: b.id, src: b.cover, alt: b.title, href: `/book/${b.id}` })),
     ...media
@@ -191,22 +199,31 @@ function RightRail() {
           </h2>
           <div className="mt-3 flex items-center gap-3">
             <div className="grid flex-1 grid-cols-3 gap-2">
-              {vinyls.map((v) => (
-                <button
-                  key={v.id}
-                  type="button"
-                  className="vinyl aspect-square"
-                  onClick={() => setPlaying((p) => !p)}
-                  aria-label={`Play ${v.alt}`}
-                >
-                  <img src={v.src} alt="" className="size-full object-cover" />
-                </button>
-              ))}
+              {vinyls.map((v) => {
+                const track = trackForCover(v.src);
+                return (
+                  <button
+                    key={v.id}
+                    type="button"
+                    className="vinyl aspect-square"
+                    onClick={() =>
+                      track
+                        ? play(track.id, {
+                            context: { label: "#Music rail" },
+                          })
+                        : play(tracks[0].id, { context: { label: "#Music rail" } })
+                    }
+                    aria-label={`Play ${track?.title ?? v.alt}`}
+                  >
+                    <img src={v.src} alt="" className="size-full object-cover" />
+                  </button>
+                );
+              })}
             </div>
             <button
               type="button"
               aria-label={playing ? "Pause" : "Play"}
-              onClick={() => setPlaying((p) => !p)}
+              onClick={toggle}
               className="flex size-10 shrink-0 items-center justify-center rounded-full shadow-[0_0_0_1.5px_var(--color-tide)] text-tide"
             >
               {playing ? (
@@ -229,7 +246,7 @@ function MobileTop() {
     <header className="pointer-events-none fixed inset-x-0 top-0 z-40 px-3 pt-3 lg:hidden">
       <div className="pointer-events-auto glass-capsule mx-auto flex h-12 max-w-lg items-center gap-2 px-2">
         <Link to="/" aria-label="AQUA home" className="shrink-0">
-          <NazarMark className="size-8" />
+          <NazarMark className="h-7 w-auto max-w-[6.75rem]" title="AQUA" />
         </Link>
         <form
           className="min-w-0 flex-1"
@@ -254,6 +271,7 @@ function MobileTop() {
             />
           </div>
         </form>
+        <PlayerSlot />
       </div>
     </header>
   );

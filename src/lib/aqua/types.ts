@@ -239,7 +239,11 @@ export interface AquaEvent {
     | "read"
     | "product_view"
     | "product_click"
-    | "add_to_cart";
+    | "add_to_cart"
+    | "play"
+    | "pause"
+    | "skip"
+    | "complete";
   entityType: string;
   entityId: string;
   at: string;

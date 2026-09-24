@@ -10,6 +10,8 @@ const TONE: Record<AvatarTone, { a: string; b: string }> = {
   deep: { a: "#0d2bdb", b: "#081820" },
 };
 
+const AQUA_LOGO_SRC = "/aqua/logo.svg";
+
 export function NazarMark({
   className,
   title,
@@ -18,33 +20,21 @@ export function NazarMark({
   title?: string;
 }) {
   return (
-    <svg viewBox="0 0 64 64" className={cn("size-8", className)} aria-hidden={!title} role={title ? "img" : undefined}>
-      {title ? <title>{title}</title> : null}
-      <circle cx="32" cy="32" r="30" fill="#0D2BDB" />
-      <circle cx="32" cy="32" r="18.5" fill="#FFFFFF" />
-      <circle cx="32" cy="32" r="11.2" fill="#7EC8F5" />
-      <circle cx="32" cy="32" r="5.1" fill="#111111" />
-    </svg>
+    <img
+      src={AQUA_LOGO_SRC}
+      alt={title ?? ""}
+      aria-hidden={title ? undefined : true}
+      className={cn("block h-8 w-auto max-w-full object-contain", className)}
+    />
   );
 }
 
 export function LogoMark({ className }: { className?: string }) {
-  return (
-    <span className={cn("relative inline-flex items-center justify-center", className)}>
-      <NazarMark className="size-full" />
-    </span>
-  );
+  return <NazarMark className={cn("h-8 w-auto", className)} title="AQUA" />;
 }
 
 export function Wordmark({ compact }: { compact?: boolean }) {
-  return (
-    <span className="flex items-center gap-2">
-      <NazarMark className="size-9" title="AQUA" />
-      {!compact && (
-        <span className="text-lg font-semibold tracking-[0.14em] text-nazar">AQUA</span>
-      )}
-    </span>
-  );
+  return <NazarMark className={compact ? "h-8 w-auto" : "h-9 w-auto"} title="AQUA" />;
 }
 
 export function ProfileAvatar({

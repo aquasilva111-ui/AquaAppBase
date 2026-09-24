@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { BookCard, ProductCard } from "@/components/aqua/cards";
 import { CommentThread } from "@/components/aqua/comments";
 import { ProfileAvatar } from "@/components/aqua/mark";
+import { TrackRow } from "@/components/aqua/player";
 import {
   getArticle,
   getBook,
@@ -13,6 +14,7 @@ import {
   getProfile,
 } from "@/lib/aqua/catalog";
 import { useAqua } from "@/lib/aqua/store";
+import { trackForPost } from "@/lib/aqua/tracks";
 import type { Post } from "@/lib/aqua/types";
 import { cn, formatCount, formatRelative } from "@/lib/utils";
 import { useState } from "react";
@@ -51,7 +53,14 @@ export function PostCard({ post }: { post: Post }) {
         >
           @{author.handle}
         </Link>
-        <span className="text-sm text-muted-foreground">· {formatRelative(post.createdAt)}</span>
+        <span className="text-sm text-muted-foreground">·</span>
+        <Link
+          to="/post/$postId"
+          params={{ postId: post.id }}
+          className="text-sm text-muted-foreground hover:underline"
+        >
+          {formatRelative(post.createdAt)}
+        </Link>
         {community && (
           <Link
             to="/communities/$communityId"
@@ -73,6 +82,20 @@ export function PostCard({ post }: { post: Post }) {
       )}
 
       {post.text && <p className="mt-3 text-[15px] leading-relaxed">{linkify(post.text)}</p>}
+
+      {post.kind === "music" &&
+        (() => {
+          const track = trackForPost(post.id);
+          if (!track) return null;
+          return (
+            <div className="mt-3">
+              <TrackRow
+                track={track}
+                context={{ label: `@${author.handle} · post`, href: `/post/${post.id}` }}
+              />
+            </div>
+          );
+        })()}
 
       {assets.length >= 2 && (
         <div className="mt-3 grid grid-cols-2 gap-2.5">

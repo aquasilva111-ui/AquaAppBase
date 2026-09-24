@@ -1,9 +1,10 @@
-import { Link, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { Link, Outlet, useNavigate, useRouterState } from "@tanstack/react-router";
+import { useMemo, useState } from "react";
 import { BookOpen } from "lucide-react";
 import { BookCard, FollowButton, PersonChip, ProductCard, WikiCard } from "@/components/aqua/cards";
 import { CommentThread } from "@/components/aqua/comments";
 import { ProfileAvatar } from "@/components/aqua/mark";
+import { PostCard } from "@/components/aqua/post-card";
 import { EmptyNote, PageTitle } from "@/components/aqua/shell";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,6 +22,7 @@ import {
   getProfileByHandle,
   getStore,
   media,
+  ME_ID,
   messages,
   originLabel,
   products,
@@ -32,6 +34,12 @@ import { mergePosts } from "@/lib/aqua/feed";
 import { useAqua } from "@/lib/aqua/store";
 import { cn, formatCount, formatPrice, formatRelative } from "@/lib/utils";
 import { toast } from "sonner";
+
+function useChildRoute(parentPath: string) {
+  return useRouterState({
+    select: (s) => s.location.pathname.startsWith(parentPath + "/"),
+  });
+}
 
 export function BooksPage() {
   return (
@@ -299,7 +307,9 @@ export function ProductPage({ productId }: { productId: string }) {
 }
 
 export function ProfilePage({ username }: { username: string }) {
+  const childActive = useChildRoute(`/u/${username}`);
   const profile = getProfileByHandle(username);
+  if (childActive) return <Outlet />;
   if (!profile) return <EmptyNote>Profile not found.</EmptyNote>;
   const authored = books.filter((b) => b.authorId === profile.id);
   const shop = products.filter((p) => p.sellerId === profile.id);
@@ -316,13 +326,18 @@ export function ProfilePage({ username }: { username: string }) {
             <p className="mt-2 text-xs text-muted-foreground">
               {formatCount(profile.followers)} followers · {profile.location}
             </p>
-            <div className="mt-4 flex gap-2">
+            <div className="mt-4 flex flex-wrap gap-2">
               <FollowButton profile={profile} />
               <Button variant="secondary" asChild>
                 <Link to="/u/$username/shop" params={{ username: profile.handle }}>
                   Shop
                 </Link>
               </Button>
+              {profile.id === ME_ID && (
+                <Button variant="secondary" asChild>
+                  <Link to="/saved">Saved</Link>
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -347,7 +362,18 @@ export function ProfilePage({ username }: { username: string }) {
           </div>
         </section>
       )}
-      <p className="mt-5 text-sm text-muted-foreground">{posts.length} posts in the graph</p>
+      <section className="mt-5">
+        <h2 className="mb-2 font-semibold">Posts</h2>
+        {posts.length === 0 ? (
+          <EmptyNote>No posts yet.</EmptyNote>
+        ) : (
+          <div className="space-y-3">
+            {posts.map((p) => (
+              <PostCard key={p.id} post={p} />
+            ))}
+          </div>
+        )}
+      </section>
     </div>
   );
 }
@@ -455,6 +481,8 @@ export function DiscoverPage() {
 }
 
 export function CommunitiesPage() {
+  const childActive = useChildRoute("/communities");
+  if (childActive) return <Outlet />;
   return (
     <div>
       <PageTitle kicker="Social" title="Communities" />
@@ -475,7 +503,16 @@ export function CommunityPage({ communityId }: { communityId: string }) {
   const community = communities.find((c) => c.id === communityId);
   const joined = useAqua((s) => Boolean(s.joined[communityId]));
   const toggleJoin = useAqua((s) => s.toggleJoin);
+  const addedPosts = useAqua((s) => s.addedPosts);
+  const feed = useMemo(
+    () =>
+      mergePosts()
+        .filter((p) => p.communityId === communityId)
+        .sort((a, b) => +new Date(b.createdAt) - +new Date(a.createdAt)),
+    [addedPosts, communityId],
+  );
   if (!community) return <EmptyNote>Community not found.</EmptyNote>;
+  const communityEvents = events.filter((e) => e.communityId === community.id);
   return (
     <div>
       <img src={community.cover} alt="" className="h-40 w-full rounded-[1.35rem] object-cover" />
@@ -483,14 +520,47 @@ export function CommunityPage({ communityId }: { communityId: string }) {
         <div>
           <h1 className="font-display text-3xl font-medium">{community.name}</h1>
           <p className="mt-1 text-sm text-muted-foreground">{community.description}</p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            {formatCount(community.members + (joined ? 1 : 0))} members
+            {community.location ? ` · ${community.location}` : ""}
+          </p>
         </div>
         <Button onClick={() => toggleJoin(community.id)}>{joined ? "Joined" : "Join"}</Button>
       </div>
+      {communityEvents.length > 0 && (
+        <section className="mt-6">
+          <h2 className="mb-2 font-semibold">Events</h2>
+          <ul className="space-y-2">
+            {communityEvents.map((e) => (
+              <li key={e.id} className="glass-card p-4">
+                <p className="font-medium">{e.title}</p>
+                <p className="text-sm text-muted-foreground">
+                  {e.when} · {e.where}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      <section className="mt-6">
+        <h2 className="mb-2 font-semibold">Posts</h2>
+        {feed.length === 0 ? (
+          <EmptyNote>No posts in this community yet.</EmptyNote>
+        ) : (
+          <div className="space-y-3">
+            {feed.map((p) => (
+              <PostCard key={p.id} post={p} />
+            ))}
+          </div>
+        )}
+      </section>
     </div>
   );
 }
 
 export function MessagesIndex() {
+  const childActive = useChildRoute("/messages");
+  if (childActive) return <Outlet />;
   return (
     <div>
       <PageTitle kicker="Chat" title="Messages" />
@@ -519,7 +589,8 @@ export function MessagesIndex() {
 
 export function ThreadPage({ threadId }: { threadId: string }) {
   const thread = threads.find((t) => t.id === threadId);
-  const extra = useAqua((s) => s.extraMessages.filter((m) => m.threadId === threadId));
+  const allExtra = useAqua((s) => s.extraMessages);
+  const extra = useMemo(() => allExtra.filter((m) => m.threadId === threadId), [allExtra, threadId]);
   const sendMessage = useAqua((s) => s.sendMessage);
   const [text, setText] = useState("");
   if (!thread) return <EmptyNote>Thread not found.</EmptyNote>;
@@ -736,6 +807,48 @@ export function WritePage() {
       >
         Publish
       </Button>
+    </div>
+  );
+}
+
+export function PostPage({ postId }: { postId: string }) {
+  const addedPosts = useAqua((s) => s.addedPosts);
+  const post = useMemo(() => mergePosts().find((p) => p.id === postId), [addedPosts, postId]);
+  if (!post) return <EmptyNote>Post not found.</EmptyNote>;
+  return (
+    <div>
+      <PostCard post={post} />
+      <section className="glass-card mt-3 p-4">
+        <h2 className="mb-3 font-semibold">Notes</h2>
+        <CommentThread targetType="post" targetId={post.id} />
+      </section>
+    </div>
+  );
+}
+
+export function SavedPage() {
+  const saved = useAqua((s) => s.saved);
+  const addedPosts = useAqua((s) => s.addedPosts);
+  const list = useMemo(
+    () => mergePosts().filter((p) => saved[p.id]),
+    [saved, addedPosts],
+  );
+  return (
+    <div>
+      <PageTitle
+        kicker="Collection"
+        title="Saved"
+        body="Posts you bookmarked. Kept on this device, like everything else here."
+      />
+      {list.length === 0 ? (
+        <EmptyNote>Nothing saved yet. Tap the bookmark on any post.</EmptyNote>
+      ) : (
+        <div className="space-y-3">
+          {list.map((p) => (
+            <PostCard key={p.id} post={p} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
