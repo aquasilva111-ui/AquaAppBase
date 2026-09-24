@@ -2,7 +2,7 @@ import { ArrowUpRight, Heart, MessageCircle, Repeat2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { EmptyNote } from "@/components/aqua/shell";
-import type { AquaContentObject } from "@/lib/aqua/content/types";
+import type { AquaContentObject, NormalizedAuthor } from "@/lib/aqua/content/types";
 import { ORIGIN_LABEL, SOURCE_CAPABILITIES } from "@/lib/aqua/sources/registry";
 import { cn, formatCount, formatRelative } from "@/lib/utils";
 
@@ -169,6 +169,104 @@ export function FederatedSearchResults({ q }: { q: string }) {
             <FederatedCard key={o.id} object={o} />
           ))}
         </div>
+      )}
+    </section>
+  );
+}
+
+const ACCT_RE = /^@?([\w.-]+)@([\w.-]+\.[a-zA-Z]{2,})$/;
+
+function useApLookup(q: string) {
+  const [state, setState] = useState<{
+    loading: boolean;
+    error: boolean;
+    actor: NormalizedAuthor | null;
+    objects: AquaContentObject[];
+  }>({ loading: false, error: false, actor: null, objects: [] });
+  const isAcct = ACCT_RE.test(q.trim());
+
+  useEffect(() => {
+    if (!isAcct) return;
+    let cancelled = false;
+    setState({ loading: true, error: false, actor: null, objects: [] });
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(`/api/fed/ap?acct=${encodeURIComponent(q.trim())}`);
+        const data = await res.json();
+        if (!res.ok || data.error) throw new Error(data.error ?? String(res.status));
+        if (!cancelled) {
+          setState({ loading: false, error: false, actor: data.actor ?? null, objects: data.objects ?? [] });
+        }
+      } catch {
+        if (!cancelled) setState({ loading: false, error: true, actor: null, objects: [] });
+      }
+    }, 450);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [q, isAcct]);
+
+  return { isAcct, ...state };
+}
+
+/**
+ * Fediverse lookup (§21): a `user@host` query resolves through WebFinger to
+ * the actor's public outbox. The actor keeps their full federated handle —
+ * never silently turned into a local AQUA account (§23).
+ */
+export function ApActorResults({ q }: { q: string }) {
+  const { isAcct, loading, error, actor, objects } = useApLookup(q);
+  if (!isAcct) return null;
+
+  return (
+    <section className="mt-6">
+      <h2 className="mb-2 font-semibold">
+        Fediverse{" "}
+        <span className="text-xs font-normal text-muted-foreground">via ActivityPub · read-only</span>
+      </h2>
+      {loading && <EmptyNote>Resolving the actor through WebFinger…</EmptyNote>}
+      {error && (
+        <EmptyNote>
+          This actor could not be read. Some servers require signed requests — AQUA only claims
+          unsigned public reads for now.
+        </EmptyNote>
+      )}
+      {!loading && !error && actor && (
+        <>
+          <div className="glass-card mb-3 flex items-center gap-3 p-3">
+            {actor.avatar ? (
+              <img src={actor.avatar} alt="" className="size-10 rounded-full object-cover" />
+            ) : (
+              <span className="flex size-10 items-center justify-center rounded-full bg-foam text-sm font-semibold text-nazar">
+                {(actor.displayName ?? actor.handle).slice(0, 1).toUpperCase()}
+              </span>
+            )}
+            <div className="min-w-0 flex-1">
+              <p className="truncate font-semibold">{actor.displayName ?? actor.handle}</p>
+              <p className="truncate text-sm text-muted-foreground">@{actor.handle}</p>
+            </div>
+            {actor.profileUrl && (
+              <a
+                href={actor.profileUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 text-sm font-medium text-nazar hover:underline"
+              >
+                Profile <ArrowUpRight className="size-3.5" />
+              </a>
+            )}
+          </div>
+          {objects.length === 0 ? (
+            <EmptyNote>The public outbox of this actor has no readable objects.</EmptyNote>
+          ) : (
+            <div className="space-y-3">
+              {objects.map((o) => (
+                <FederatedCard key={o.id} object={o} />
+              ))}
+            </div>
+          )}
+        </>
       )}
     </section>
   );

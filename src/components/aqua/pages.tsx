@@ -5,7 +5,7 @@ import { BookCard, FollowButton, PersonChip, ProductCard, WikiCard } from "@/com
 import { CommentThread } from "@/components/aqua/comments";
 import { ProfileAvatar } from "@/components/aqua/mark";
 import { PostCard } from "@/components/aqua/post-card";
-import { FederatedSearchResults } from "@/components/aqua/federated-card";
+import { FederatedSearchResults, ApActorResults } from "@/components/aqua/federated-card";
 import { EmptyNote, PageTitle } from "@/components/aqua/shell";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -443,6 +443,7 @@ export function SearchPage({ q }: { q: string }) {
         </section>
       )}
       <FederatedSearchResults q={q} />
+      <ApActorResults q={q} />
     </div>
   );
 }
