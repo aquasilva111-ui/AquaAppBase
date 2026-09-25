@@ -47,7 +47,7 @@ const GROUPS: { title: string; items: { id: ModuleId; label: string; to: string;
     title: "Media",
     items: [
       { id: "photos", label: "Photos", to: "/studio/media", icon: Camera, ready: true },
-      { id: "videos", label: "Videos", to: "/studio/media", icon: Film, ready: true },
+      { id: "videos", label: "Videos", to: "/videos", icon: Film, ready: true },
       { id: "music", label: "Music", to: "/feed/music", icon: Music, ready: true },
       { id: "live", label: "Live", to: "/direction/live", icon: Radio, ready: false },
     ],

@@ -21,7 +21,9 @@ import { Route as MessagesRouteImport } from './routes/messages'
 import { Route as NotificationsRouteImport } from './routes/notifications'
 import { Route as SavedRouteImport } from './routes/saved'
 import { Route as SearchRouteImport } from './routes/search'
+import { Route as ShortsRouteImport } from './routes/shorts'
 import { Route as StudioRouteImport } from './routes/studio'
+import { Route as VideosRouteImport } from './routes/videos'
 import { Route as WikiRouteImport } from './routes/wiki'
 import { Route as WriteRouteImport } from './routes/write'
 import { Route as ApiHealthRouteImport } from './routes/api/health'
@@ -101,9 +103,19 @@ const SearchRoute = SearchRouteImport.update({
   path: '/search',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShortsRoute = ShortsRouteImport.update({
+  id: '/shorts',
+  path: '/shorts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StudioRoute = StudioRouteImport.update({
   id: '/studio',
   path: '/studio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VideosRoute = VideosRouteImport.update({
+  id: '/videos',
+  path: '/videos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WikiRoute = WikiRouteImport.update({
@@ -210,7 +222,9 @@ export interface FileRoutesByFullPath {
   '/notifications': typeof NotificationsRoute
   '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
+  '/shorts': typeof ShortsRoute
   '/studio': typeof StudioRouteWithChildren
+  '/videos': typeof VideosRoute
   '/wiki': typeof WikiRouteWithChildren
   '/write': typeof WriteRoute
   '/api/health': typeof ApiHealthRoute
@@ -243,7 +257,9 @@ export interface FileRoutesByTo {
   '/notifications': typeof NotificationsRoute
   '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
+  '/shorts': typeof ShortsRoute
   '/studio': typeof StudioRouteWithChildren
+  '/videos': typeof VideosRoute
   '/wiki': typeof WikiRouteWithChildren
   '/write': typeof WriteRoute
   '/api/health': typeof ApiHealthRoute
@@ -277,7 +293,9 @@ export interface FileRoutesById {
   '/notifications': typeof NotificationsRoute
   '/saved': typeof SavedRoute
   '/search': typeof SearchRoute
+  '/shorts': typeof ShortsRoute
   '/studio': typeof StudioRouteWithChildren
+  '/videos': typeof VideosRoute
   '/wiki': typeof WikiRouteWithChildren
   '/write': typeof WriteRoute
   '/api/health': typeof ApiHealthRoute
@@ -312,7 +330,9 @@ export interface FileRouteTypes {
     | '/notifications'
     | '/saved'
     | '/search'
+    | '/shorts'
     | '/studio'
+    | '/videos'
     | '/wiki'
     | '/write'
     | '/api/health'
@@ -345,7 +365,9 @@ export interface FileRouteTypes {
     | '/notifications'
     | '/saved'
     | '/search'
+    | '/shorts'
     | '/studio'
+    | '/videos'
     | '/wiki'
     | '/write'
     | '/api/health'
@@ -378,7 +400,9 @@ export interface FileRouteTypes {
     | '/notifications'
     | '/saved'
     | '/search'
+    | '/shorts'
     | '/studio'
+    | '/videos'
     | '/wiki'
     | '/write'
     | '/api/health'
@@ -412,7 +436,9 @@ export interface RootRouteChildren {
   NotificationsRoute: typeof NotificationsRoute
   SavedRoute: typeof SavedRoute
   SearchRoute: typeof SearchRoute
+  ShortsRoute: typeof ShortsRoute
   StudioRoute: typeof StudioRouteWithChildren
+  VideosRoute: typeof VideosRoute
   WikiRoute: typeof WikiRouteWithChildren
   WriteRoute: typeof WriteRoute
   ApiHealthRoute: typeof ApiHealthRoute
@@ -513,11 +539,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SearchRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shorts': {
+      id: '/shorts'
+      path: '/shorts'
+      fullPath: '/shorts'
+      preLoaderRoute: typeof ShortsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/studio': {
       id: '/studio'
       path: '/studio'
       fullPath: '/studio'
       preLoaderRoute: typeof StudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/videos': {
+      id: '/videos'
+      path: '/videos'
+      fullPath: '/videos'
+      preLoaderRoute: typeof VideosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/wiki': {
@@ -729,7 +769,9 @@ const rootRouteChildren: RootRouteChildren = {
   NotificationsRoute: NotificationsRoute,
   SavedRoute: SavedRoute,
   SearchRoute: SearchRoute,
+  ShortsRoute: ShortsRoute,
   StudioRoute: StudioRouteWithChildren,
+  VideosRoute: VideosRoute,
   WikiRoute: WikiRouteWithChildren,
   WriteRoute: WriteRoute,
   ApiHealthRoute: ApiHealthRoute,

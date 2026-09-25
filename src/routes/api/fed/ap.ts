@@ -107,9 +107,22 @@ export const Route = createFileRoute("/api/fed/ap")({
             items = first.orderedItems ?? first.items ?? [];
           }
 
-          const objects = items
-            .slice(0, MAX_ITEMS)
-            .map((item) => normalizeApItem(item as never, actor))
+          const rawItems = items.slice(0, MAX_ITEMS);
+          // PeerTube & friends publish Create activities whose object is a URL,
+          // not an embedded object — resolve those, never failing the whole
+          // page over one bad object (§44).
+          const resolved = await Promise.allSettled(
+            rawItems.map(async (item) => {
+              const activity = item as { type?: string; object?: unknown };
+              if (activity.type === "Create" && typeof activity.object === "string") {
+                return { ...activity, object: await apFetch(activity.object) };
+              }
+              return item;
+            }),
+          );
+          const objects = resolved
+            .filter((r) => r.status === "fulfilled")
+            .map((r) => normalizeApItem(r.value as never, actor))
             .filter((o) => o !== null);
 
           return Response.json({
